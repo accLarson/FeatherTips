@@ -1,6 +1,7 @@
 package com.zerek.feathertips.commands;
 
 import com.zerek.feathertips.FeatherTips;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -23,7 +24,7 @@ public class FeatherTipsCommand implements CommandExecutor {
                 return true;
             }
         }
-        sender.sendMessage("You do not have access to that command.");
+        else sender.sendMessage(ChatColor.of("#E4453A") + "no permission");
         return true;
     }
 }

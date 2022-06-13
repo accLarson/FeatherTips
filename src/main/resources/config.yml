@@ -285,6 +285,12 @@ topics:
                 \n<#656b96>There are <#949bd1>3 safe-zones (no PvP) <#656b96>on the island: <#949bd1>the ship<#656b96>, <#949bd1>the hub<#656b96>, <#949bd1>and the spawn platform
                 \n<#656b96>You must travel out to build."
 
+distinguish:
+  donor: "<#fffccb><message>"
+  assistant: "<#b5e5f6><message>"
+  moderator: "<#dbf3bf><message>"
+  administrator: "<#f51657><message>"
+
 AssTips:
   - "<#96d7f2>Ass Tip: Keep up to date on #announcements."
   - "<#96d7f2>Ass Tip: Keep up to date on #changelog."
