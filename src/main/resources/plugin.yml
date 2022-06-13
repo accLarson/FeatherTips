@@ -1,0 +1,13 @@
+name: FeatherTips
+version: '${project.version}'
+main: com.zerek.feathertips.FeatherTips
+api-version: 1.18
+authors: [ Zerek ]
+description: Tip system for feather64
+commands:
+  tip:
+    description: Display long format tips to individuals (often yourself)
+  broadcast:
+    description: Display short format tips to all online players
+  feathertips:
+    usage: /feathertips reload

@@ -1,0 +1,343 @@
+#InfoTool - Made by Zerek - Made for feather64.net
+
+period: 10800
+
+prefix-line: "<#ffffff>•<#7777777>--- <#ffffff>feather64 Tips <#7777777>-----------------------------------<#ffffff>•"
+suffix-line: "<#ffffff>•<#7777777>----------------------------------------------------<#ffffff>•"
+tip-others: "<#ffffff>• <#949bd1><staff_username> <#656b96>displayed tip <#949bd1><topic> <#656b96>to <#949bd1><username>."
+tip-usage: "<#ffffff>/tip [topic]"
+
+topics:
+  tips:
+    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/tip <#656b96>to get f64 tips."
+    long-format: "<#656b96>Type <#949bd1>/tip <#656b96>for the command guide."
+  water:
+    short-format: "<#ffffff>• <#656b96>Please drink water."
+    long-format: "<#656b96>Water is essential for the kidneys and other bodily functions.
+                \n<#656b96>Dehydration can cause skin disorders.
+                \n<#656b96>Drinking water instead of soda can help with weight loss."
+  brainwash:
+    short-format: "<#ffffff>• <#656b96>This is your favourite server"
+    long-format: "<#656b96>This is your favourite server
+                \n<#656b96>Why would you even want to play on another server?"
+  outside:
+    short-format: "<#ffffff>• <#656b96>Please go outside."
+    long-format: "<#656b96>Going outside is good for your health.
+                \n<#656b96>It helps clear your lungs.
+                \n<#656b96>It can give you more energy and mental focus.
+                \n<#656b96>Post a picture in discord."
+  eyes:
+    short-format: "<#ffffff>• <#656b96>Focus your eyes on something far away from time to time."
+    long-format: "<#656b96>Looking at a screen all day can damage your eyes.
+                \n<#656b96>Take some time to rest your eyes, look at something far away."
+  gay:
+    short-format: "<#ffffff>• <#656b96>F64 is gays only. <#949bd1>/tip gay"
+    long-format: "<#656b96>You are a homosexual."
+  love:
+    short-format: "<#ffffff>• <#656b96>Love you. <#949bd1>/tip love"
+    long-format: "<#656b96>You are loved."
+  posture:
+    short-format: "<#ffffff>• <#656b96>Check your posture, its easy to slouch while sitting"
+    long-format: "<#656b96> keep your feet flat or rest them the floor or a footrest.
+                \n<#656b96>avoid crossing your knees or ankles.
+                \n<#656b96>maintain a small gap between the back of the knees and the chair.
+                \n<#656b96>place your ankles in front of the knees.
+                \n<#656b96>relax your shoulders."
+
+
+
+  rules:
+    short-format: "<#ffffff>• <#656b96>READ THE RULES <#949bd1>/rules"
+    long-format: "<#656b96>1. <#949bd1>Do not use macros, mods, or hacked clients. <#656b96>QOL mods are allowed.
+                \n<#656b96>2. <#949bd1>Do not use dupes which work on all items. <#656b96>Dupes which work on one item, are allowed.
+                \n<#656b96>3. <#949bd1>Follow the directions of admins and mods. <#656b96>Directions given to other players do not apply to you.
+                \n<#656b96>Not knowing the rules is not a valid excuse.
+                \n<#656b96>Full rules: <#949bd1>https://feather64.net/#rules  <#ffffff><- CLICK"
+  anarchy:
+    short-format: "<#ffffff>• <#656b96>f64 is NOT an anarchy server. <#949bd1>/rules"
+    long-format: "<#656b96>Rule 1. <#949bd1>Do not use macros, mods, or hacked clients. <#656b96>QOL mods are allowed.
+                \n<#656b96>Some youtube videos have reviewed us as anarchy however, we are not.
+                \n<#656b96>Not knowing the rules is not a valid excuse.
+                \n<#656b96>You are allowed to raid and grief."
+  clients:
+    short-format: "<#ffffff>• <#656b96>QOL clients are permitted such as badlion, and lunar. check <#949bd1>/rules."
+    long-format: "<#656b96>3rd party clients like Badlion and Lunar are permitted.
+                \n<#656b96>Hacked clients are not permitted in any situation."
+  dupes:
+    short-format: "<#ffffff>• <#656b96>Rule 2. Do not use dupes which work on all items. <#949bd1>/tip dupes"
+    long-format: "<#656b96>Duplication glitches which work on all items, are not allowed.
+                \n<#656b96>If a dupe glitch only works for specific items, its allowed.
+                \n<#656b96>Examples of permitted dupes: TNT, carpet, rail
+                \n<#656b96>Some dupes are blocked by plugins such as portal gravity dupes."
+  keepinventory:
+    short-format: "<#ffffff>• <#656b96>New players have keep-inventory enabled for <#949bd1>1 hour."
+    long-format: "<#656b96>In order to help new players get away from spawn without losing their feather and basic kit, new player have keep-inventory enabled for <#949bd1>1 hour<#656b96>.
+                \n<#656b96>To new players: Don't waste this time, get yourself far away from spawn and sethome.
+                \n<#656b96>If players attempt to abuse this feature, their keep-inventory status will be automatically removed."
+  feather:
+    short-format: "<#ffffff>• <#656b96>Player Feathers are collectible f64 items. <#949bd1>/tip feather"
+    long-format: "<#656b96>Every player starts their adventure on feather64 with an official feather which has their name in its lore.
+                \n<#656b96>The feather has no abilities. Feathers are collectibles and will not be replaced.
+                \n<#656b96>Many players will trick you into dropping your feather 'press q to activate your feather', this drops your feather.
+                \n<#656b96>Many players will kill and raid to collect other players feathers. "
+  report:
+    short-format: "<#ffffff>• <#656b96>Please privately report hackers to a Moderator via Discord."
+    long-format: "<#656b96>We appreciate reports of hackers.
+                \n<#656b96>When you publicly announce that a hacker is online, you are helping them know when to hide their hacks.
+                \n<#656b96>Please join the discord (<#949bd1>/discord) and report to a mod."
+  combatlog:
+    short-format: "<#ffffff>• <#656b96>Logging out in PvP will spawn an NPC with your inventory!"
+    long-format: "<#656b96>When you combat log on f64, an NPC will spawn with your inventory.
+                \n<#656b96>If it is killed, your items will drop and you will reconnect dead.
+                \n<#656b96>The NPC will disappear after 30 seconds.
+                \n<#656b96>You will not be able to reconnect while your NPC is still alive."
+  staff:
+    short-format: "<#ffffff>• <#656b96>Got a Question? Ask staff <#949bd1>/tip staff"
+    long-format: "<#f2727e>Administrator <#64BFE3>- <#656b96>Oversee the entire server. (owners)
+                \n<#8fe38c>Moderator <#64BFE3>- <#656b96>Punish rule breakers.
+                \n<#96d7f2>Assistant <#64BFE3>- <#656b96>Assist players with f64 info."
+  roles:
+    short-format: "<#ffffff>• <#656b96>Type /tip roles to understand all the username colors."
+    long-format: "<#656b96>Role colors:
+                \n<#f2727e>Administrator
+                \n<#8fe38c>Moderator
+                \n<#96d7f2>Assistant
+                \n<#ffeb8b>Donor
+                \n<#aaaaaa>Player"
+  supporter:
+    short-format: "<#ffffff>• <#656b96>Become a supporter $5+/month - <#949bd1>/tip supporter"
+    long-format: "<#ffeb8b>https://donate.feather64.net/
+                \n<#656b96>To be a supporter, donate $5+ USD monthly via the Supporter Subscription package at the <#949bd1>/donate link<#656b96>.
+                \n<#656b96>Supporters get a <#AA0000>+ <#656b96>beside their nametag to indicate their supporter status. No other perks
+                \n<#656b96>Only perm donors can become supporters"
+  donate:
+    short-format: "<#ffffff>• <#656b96>Become a donor - <#949bd1>/tip donate"
+    long-format: "<#FFC170>https://donate.feather64.net/
+                \n<#656b96>Gold name
+                \n<#656b96>Discord Perks
+                \n<#656b96>Set <#949bd1>3 homes <#656b96>instead of the default 1
+                \n<#656b96>/ss set (change spawner type - limited options)
+                \n<#656b96>An aesthetic Donor kit
+                \n<#656b96>An Color codes on signs and yellow chat color code access.
+                \n<#656b96>All perks listed at the link above"
+  spawners:
+    short-format: "<#ffffff>• <#656b96>Use a silk touch pickaxe to mine and collect spawners."
+    long-format: "<#656b96>All pickaxes with the silk touch enchantment can mine spawners.
+                \n<#656b96>Move spawners wherever you'd like.
+                \n<#656b96>Donors can change spawner type. <#949bd1>/ss change [creature]
+                \n<#656b96>Donors can only change spawners to natural types. <#949bd1>/donate"
+  colors:
+    short-format: "<#ffffff>• <#656b96>Donors can use color codes on signs."
+    long-format: "<#656b96>Donors can color text on signs with color codes.
+                \n<#656b96>Prefix text on signs with &<code>
+                \n<#656b96><code> options:
+                 &11 &22 &33 &44 &55 &66 &77 &88 &99 &00 &aa &bb &cc &dd &ee &ff
+                \n<#656b96>Donors can also use color code e in chat."
+  ignore:
+    short-format: "<#ffffff>• <#656b96>y'all have access to <#949bd1>/ignore <player>"
+    long-format: "<#656b96>We allow a lot of crude and toxic chat on f64.
+                \n<#656b96>You can use /ignore to remove yourself from chat you don't like."
+  border:
+    short-format: "<#ffffff>• <#656b96>BORDERS Overworld: <#949bd1>512k <#656b96>Nether: <#949bd1>64k <#656b96>End: borderless-resets"
+    long-format: "<#656b96>World Borders:
+                \n<#656b96>Overworld: <#949bd1>512,000
+                \n<#656b96>Nether: <#949bd1>64,000
+                \n<#656b96>The End: <#949bd1>Borderless <#656b96>- <#949bd1>/tip endreset"
+  economy:
+    short-format: "<#ffffff>• <#656b96>Lapis is used as currency on f64. <#949bd1>/tip economy"
+    long-format: "<#949bd1>/deposit <amount | all> <#656b96>- Add Lapis to your account.
+                \n<#949bd1>/withdraw <amount> <#656b96>- Take out Lapis from your account.
+                \n<#949bd1>/balance <#656b96>- display current amount of Lapis in your account.
+                \n<#949bd1>/transfer <player> <amount> <#656b96>- send Lapis.
+                \n<#949bd1>/tip market <#656b96>- Information about the market"
+  market:
+    short-format: "<#ffffff>• <#656b96>The market allows players to post and view trade ads. <#949bd1>/tip market"
+    long-format: "<#656b96>The market is simply a place for you to post and view ads.
+                \n<#656b96>The market doesn't assist with transactions of goods.
+                \n<#949bd1>/market help <#656b96>- View market commands."
+
+  sleep:
+    short-format: "<#ffffff>• <#656b96>The night passes exponentially faster as more people sleep."
+    long-format: "<#656b96>To allow players to skip the night, time will speed up as more people sleep in beds."
+
+  restarts:
+    short-format: "<#ffffff>• <#656b96>f64 restarts daily at <#949bd1>3:00AM ET<#656b96>."
+    long-format: "<#656b96>Servers need to restart periodically to run smoothly.
+                \n<#656b96>feather64 restarts every 24 hours at <#949bd1>3:00AM ET<#656b96>."
+  clan:
+    short-format: "<#ffffff>• <#656b96>Use clans to play together. <#949bd1>/tip clan"
+    long-format: "<#656b96>Clans allow groups of players to play together.
+                \n<#656b96>Creating  a clan: <#949bd1>10,000 Lapis
+                \n<#656b96>Setting clan home: <#949bd1>1,000 Lapis
+                \n<#656b96>Inviting someone to your clan: <#949bd1>100 Lapis
+                \n<#949bd1>3+ <#656b96>members required to set clan home.
+                \n<#656b96>Type <#949bd1>/clan <#656b96>to see all clan commands."
+  totems:
+    short-format: "<#ffffff>• <#656b96>Only Illusioners drop totems. <#949bd1>/tip totems"
+    long-format: "<#656b96>On feather64, we want PvP to be profitable
+                \n<#656b96>We prefer fights without totems.
+                \n<#656b96>Type <#949bd1>/tip illusioner <#656b96>for more information."
+
+  illusioner:
+    short-format: "<#ffffff>• <#656b96>You can summon an Illusioner on f64. <#949bd1>/tip illusioner"
+    long-format: "<#656b96>Illusioners are the only mob that drops totems on f64. <#949bd1>/tip totems
+                \n<#656b96>Illusioners are a custom boss which require a team to fight.
+                \n<#656b96>Once spawned, the Illusioner will summon 10 vexes.
+                \n<#656b96>The Illusioner's bow can 1 shot players with high tier armor.
+                \n<#656b96>To spawn the Illusioner place the following blocks:
+                \n<#949bd1> [] <#656b96>- Wadering Trader Head
+                \n<#949bd1>[  ] <#656b96>- Lapis Block
+                \n<#949bd1>[  ] <#656b96>- Lapis Block"
+
+  raidfarm:
+    short-format: "<#ffffff>• <#656b96>Raid farms do not drop totems."
+    long-format: "<#656b96>Illusioners are the only mob that drops totems on f64.
+                \n<#949bd1>/tip totems /tip illusioner"
+
+  endreset:
+    short-format: "<#ffffff>• <#656b96>The End resets on the 1st & 16th of the month. <#949bd1>/tip endreset"
+    long-format: "<#656b96>The End resets on the 1st at <#949bd1>7:30pm ET
+                \n<#656b96>The End resets on the 16th at <#949bd1>7:30pm GMT (2:30pm ET)
+                \n<#656b96>The End is a poor base location because of this.
+                \n<#656b96>The portal closest to spawn is protected from grief."
+  msg:
+    short-format: "<#ffffff>• <#656b96>Messaging commands let you privately chat. /tip msg"
+    long-format: "<#656b96>Messaging commands let you privately speak to another player.
+                \n<#656b96>/msg [player] [message]   -  initiate a private conversation.
+                \n<#656b96>/r [message]  -  Respond to the last person who PMed you."
+  teleport:
+    short-format: "<#ffffff>• <#656b96>There are 5 commands to teleport on f64. <#949bd1>/tip teleport"
+    long-format: "<#949bd1>/spawn  <#656b96>- Teleport to spawn island safe platform.
+                \n<#949bd1>/warp [ warp name ]  <#656b96>- Teleports you to a safe location.
+                \n<#949bd1>/tpa [ player ]      <#656b96>- Request to teleport to another player.
+                \n<#949bd1>/home  <#656b96>-  This will take you your home. <#949bd1>/tip homes
+                \n<#949bd1>/clan home  <#656b96>-  A home set by your clan leader <#949bd1>/tip clan."
+  homes:
+    short-format: "<#ffffff>• <#656b96>Players can set a personal home <#949bd1>/tip homes"
+    long-format: "<#656b96>DEFAULT PLAYERS:
+                \n<#949bd1>/sethome  <#656b96>- Sets your home location.
+                \n<#949bd1>/home  <#656b96>- Teleports you to your home location.
+                \n<#656b96>DONORS:
+                \n<#949bd1>/sethome [ home name ]  <#656b96>- sets one of your <#949bd1>3 <#656b96>home locations.
+                \n<#949bd1>/home [ home name ]     <#656b96>- Teleports you to the specified home.
+                \n<#949bd1>/delhome [ home name ]  <#656b96>- Deleted the specified home."
+  warps:
+    short-format: "<#ffffff>• <#656b96>Use warps to teleport to server hotspots. <#949bd1>/tip warps"
+    long-format: "<#656b96>Use warps to teleport to server hotspots.
+                \n<#656b96>When warping, you must stand still for <#949bd1>4 <#656b96>seconds.
+                \n<#656b96>Some warps are for travelling away from spawn [<#949bd1>N<#656b96>,<#949bd1>E<#656b96>,<#949bd1>S<#656b96>,<#949bd1>W<#656b96>]
+                \n<#656b96>Some warps are for hanging out [<#949bd1>ship<#656b96>, <#949bd1>spawn<#656b96>, <#949bd1>donor<#656b96>]
+                \n<#949bd1>/warp <warp>"
+  new:
+    short-format: "<#ffffff>• <#656b96>New player info: <#949bd1>/tip new"
+    long-format: "<#656b96>To safely leave spawn, use a warp.
+                \n<#656b96><#949bd1>/warp n<#656b96>, <#949bd1>/warp e<#656b96>, <#949bd1>/warp s<#656b96>, <#949bd1>/warp w
+                \n<#656b96>New players have keep-inventory enabled for <#949bd1>1 hour
+                \n<#656b96>We suggest building your base at least <#949bd1>50k <#656b96>out. <#949bd1>/tip basing
+                \n<#656b96>We are not anarchy, we have rules; however, raiding and griefing are allowed.
+                \n<#656b96>Check out the command <#949bd1>/tip"
+  basing:
+    short-format: "<#ffffff>• <#656b96>Base security tips: <#949bd1>/tip basing"
+    long-format: "<#656b96>Build <#949bd1>50k+ <#656b96>block away from spawn
+                \n<#656b96>Build your base underground.
+                \n<#656b96>Avoid mining around your base, giving it a large footprint.
+                \n<#656b96>Do not create a nether portal at your base."
+  steam:
+    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/tip <#656b96>steam to join our steam group!"
+    long-format: "<#656b96>Join our steam group!
+                \n<#949bd1>https://steamcommunity.com/groups/feather64"
+  discord:
+    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/discord <#656b96>to join our community!"
+    long-format: "<#656b96>Discord is the center of information for feather64.
+                \n<#656b96>Enjoy shenanigans in discord text and voice channels.
+                \n<#656b96>Use <#949bd1>/discord <#656b96>to get an invite link.
+                \n<#656b96>Follow the instructions in <#949bd1>#link-instructions <#656b96>to join"
+  website:
+    short-format: "<#ffffff>• <#949bd1>https://feather64.net"
+    long-format: "<#949bd1>https://feather64.net"
+  enderchest:
+    short-format: "<#ffffff>• <#656b96>Ender chests are disabled on f64."
+    long-format: "<#656b96>Ender chests are disabled on feather64.
+                \n<#656b96>You cannot craft, open, break, or place them.
+                \n<#656b96>On f64, we want raids to be  profitable."
+  prefix:
+    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/prefix <#656b96>to learn about the roman numeral prefixes."
+    long-format: "<#656b96>Prefixes are the roman numerals infront of player's names.
+                \n<#656b96>Prefixes represent the hours that you've played.(AFK hours inlcuded)
+                \n<#656b96>Type <#949bd1>/prefix <#656b96>to get your prefix information."
+  seasons:
+    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/tip seasons <#656b96>to see our history."
+    long-format: "<#949bd1>Season 01: <#656b96>2012 (~180 days)
+                \n<#949bd1>Season 02: <#656b96>December 2013 - January 2014 (~60 days)
+                \n<#949bd1>Season 03: <#656b96>February 2014 - June 2015 (~500 days)
+                \n<#949bd1>Season 04: <#656b96>July 2015 - August 2016 (~430 days)
+                \n<#949bd1>Season 05: <#656b96>November 2016 - August 2017 (~300 days)
+                \n<#949bd1>Season 06: <#656b96>December 2017 - May 2018 (~180 days)
+                \n<#949bd1>Season 07: <#656b96>September 2018 - June 2019 (~300 days)
+                \n<#949bd1>Season 08: <#656b96>June 2019 - February 20 2020 (~250 days)
+                \n<#949bd1>Season 09: <#656b96>February 21 2020 - March 29 2020 (38 days)
+                \n<#949bd1>Season 10: <#656b96>April 3 2020 - August 2 2020 (122 days)
+                \n<#949bd1>Season 11: <#656b96>August 7th 2020 - December 4 2021 (484 days)
+                \n<#949bd1>Season 12: <#656b96>January 7th 2022 - Present"
+  spawn:
+    short-format: "<#ffffff>• <#656b96>Spawn is a protected island where players can meet up."
+    long-format: "<#656b96>Spawn is a protected island where players can meet up.
+                \n<#656b96>There are <#949bd1>3 safe-zones (no PvP) <#656b96>on the island: <#949bd1>the ship<#656b96>, <#949bd1>the hub<#656b96>, <#949bd1>and the spawn platform
+                \n<#656b96>You must travel out to build."
+
+AssTips:
+  - "<#96d7f2>Ass Tip: Keep up to date on #announcements."
+  - "<#96d7f2>Ass Tip: Keep up to date on #changelog."
+  - "<#96d7f2>Ass Tip: Keep up to date on /tip"
+  - "<#96d7f2>Ass Tip: Don't kill new players."
+  - "<#96d7f2>Ass Tip: Focus on answering chat questions."
+  - "<#96d7f2>Ass Tip: Help new players with info, not items!"
+  - "<#96d7f2>Ass Tip: Don't be to toxic lmao."
+  - "<#96d7f2>Ass Tip: Report possible exploits."
+  - "<#96d7f2>Ass Tip: Don't call out vanished admins/mods."
+  - "<#96d7f2>Ass Tip: /sc <message>"
+  - "<#96d7f2>Ass Tip: Mute spammers ONLY when its hack spam."
+  - "<#96d7f2>Ass Tip: Kick players only when absolutely required."
+  - "<#96d7f2>Ass Tip: Build the community."
+  - "<#96d7f2>Ass Tip: /tip <tip> <player>"
+  - "<#96d7f2>Ass Tip: /broadcast <tip>"
+  - "<#96d7f2>Ass Tip: Hang in there!"
+  - "<#96d7f2>Ass Tip: You can build at /warp ass."
+  - "<#96d7f2>Ass Tip: Don't trick players who trust you because of your role"
+  - "<#96d7f2>Ass Tip: Combat spammers with /tip ignore or /broadcast ignore"
+  - "<#96d7f2>Ass Tip: Teach how to find info instead of sending the info."
+  - "<#96d7f2>Ass Tip: Be an ass_, but don't act like an ass."
+  - "<#96d7f2>Ass Tip: Ask for clarification from other staff when needed."
+  - "<#96d7f2>Ass Tip: Correct spreading of false information"
+  - "<#96d7f2>Ass Tip: Assistants must be gay and autistic."
+  - "<#96d7f2>Ass Tip: F64 players are allowed to be toxic."
+  - "<#96d7f2>Ass Tip: Do not moderate, leave that to the moderators"
+  - "<#96d7f2>Ass Tip: Ass (wo)man"
+  - "<#96d7f2>Ass Tip: Assist players with info."
+  - "<#96d7f2>Ass Tip: You are loved."
+  - "<#96d7f2>Ass Tip: May I take your order?"
+
+ModTips:
+  - "<#8fe38c>Mod Tip: Focus on catching rule breakers."
+  - "<#8fe38c>Mod Tip: /ban <player> <days>d <reason>"
+  - "<#8fe38c>Mod Tip: /lookup <player> [ban date]"
+  - "<#8fe38c>Mod Tip: Help assistants learn their role."
+  - "<#8fe38c>Mod Tip: Ignore mod duties whenever you want."
+  - "<#8fe38c>Mod Tip: Banning for jokes/admittance is for admins only."
+  - "<#8fe38c>Mod Tip: Never ban unless you are 100% certain."
+  - "<#8fe38c>Mod Tip: Mods raiding is discouraged since it can look... bad."
+  - "<#8fe38c>Mod Tip: Consider how your PvP choices reflect on the server."
+  - "<#8fe38c>Mod Tip: Backup staff 100% in public chats."
+  - "<#8fe38c>Mod Tip: Encourage private reports from players."
+  - "<#8fe38c>Mod Tip: Take your anger out on assistants."
+  - "<#8fe38c>Mod Tip: Leave assistant duties for assistants when possible."
+  - "<#8fe38c>Mod Tip: When you give directions, its LAW, be careful!"
+  - "<#8fe38c>Mod Tip: KNOW THE RULES /rules"
+  - "<#8fe38c>Mod Tip: /sc <message>"
+  - "<#8fe38c>Mod Tip: /tip <tip> <player>"
+  - "<#8fe38c>Mod Tip: /broadcast <tip>"
+  - "<#8fe38c>Mod Tip: Avoid watching established players without reason."
+  - "<#8fe38c>Mod Tip: Don't AnneTurtle"
+  - "<#8fe38c>Mod Tip: Watching new players is an easy way to find hackers."
+  - "<#8fe38c>Mod Tip: The admins will support your bans 100%"
+  - "<#8fe38c>Mod Tip: Staff backup staff. Its the f64 way."
