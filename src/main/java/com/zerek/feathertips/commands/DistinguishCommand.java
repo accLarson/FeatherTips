@@ -33,4 +33,3 @@ public class DistinguishCommand implements CommandExecutor {
             return true;
     }
 }
-//§

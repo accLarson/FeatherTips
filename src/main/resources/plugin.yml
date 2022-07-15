@@ -1,7 +1,7 @@
 name: FeatherTips
 version: '${project.version}'
 main: com.zerek.feathertips.FeatherTips
-api-version: 1.18
+api-version: 1.19
 authors: [ Zerek ]
 description: Tip system for feather64
 commands:
@@ -13,3 +13,5 @@ commands:
     description: Send a message with distinguished color based on your role
   feathertips:
     usage: /feathertips reload
+  servertime:
+    description: Displays server time (ET)

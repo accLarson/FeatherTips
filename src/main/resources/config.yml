@@ -1,7 +1,8 @@
-#InfoTool - Made by Zerek - Made for feather64.net
+#FeatherTips - Made by Zerek - Made for feather64.net
 
 period: 10800
 
+server-time: "<#656b96>Server time: <#949bd1><time>"
 prefix-line: "<#ffffff>•<#7777777>--- <#ffffff>feather64 Tips <#7777777>-----------------------------------<#ffffff>•"
 suffix-line: "<#ffffff>•<#7777777>----------------------------------------------------<#ffffff>•"
 tip-others: "<#ffffff>• <#949bd1><staff_username> <#656b96>displayed tip <#949bd1><topic> <#656b96>to <#949bd1><username>."
@@ -43,19 +44,21 @@ topics:
                 \n<#656b96>maintain a small gap between the back of the knees and the chair.
                 \n<#656b96>place your ankles in front of the knees.
                 \n<#656b96>relax your shoulders."
-
-
-
   rules:
     short-format: "<#ffffff>• <#656b96>READ THE RULES <#949bd1>/rules"
-    long-format: "<#656b96>1. <#949bd1>Do not use macros, mods, or hacked clients. <#656b96>QOL mods are allowed.
+    long-format: "<#656b96>1. <#949bd1>Do not use macros, mods, hacks, etc. <#656b96>QOL mods are allowed.
                 \n<#656b96>2. <#949bd1>Do not use dupes which work on all items. <#656b96>Dupes which work on one item, are allowed.
                 \n<#656b96>3. <#949bd1>Follow the directions of admins and mods. <#656b96>Directions given to other players do not apply to you.
                 \n<#656b96>Not knowing the rules is not a valid excuse.
-                \n<#656b96>Full rules: <#949bd1>https://feather64.net/#rules  <#ffffff><- CLICK"
+                \n<#656b96>Full rules: <#949bd1><hover:show_text:'https://feather64.net/'><click:open_url:https://feather64.net>feather64.net</click></hover>"
+  hacks:
+    short-format: "<#ffffff>• <#656b96>Hacking is not allowed. <#949bd1>/rules"
+    long-format: "<#656b96>Rule 1. <#949bd1>Do not use macros, mods, hacks, etc. <#656b96>QOL mods are allowed.
+                \n<#656b96>Not knowing the rules is not a valid excuse.
+                \n<#656b96>QOL mods are allowed."
   anarchy:
     short-format: "<#ffffff>• <#656b96>f64 is NOT an anarchy server. <#949bd1>/rules"
-    long-format: "<#656b96>Rule 1. <#949bd1>Do not use macros, mods, or hacked clients. <#656b96>QOL mods are allowed.
+    long-format: "<#656b96>Rule 1. <#949bd1>Do not use macros, mods, hacks, etc. <#656b96>QOL mods are allowed.
                 \n<#656b96>Some youtube videos have reviewed us as anarchy however, we are not.
                 \n<#656b96>Not knowing the rules is not a valid excuse.
                 \n<#656b96>You are allowed to raid and grief."
@@ -78,18 +81,18 @@ topics:
     short-format: "<#ffffff>• <#656b96>Player Feathers are collectible f64 items. <#949bd1>/tip feather"
     long-format: "<#656b96>Every player starts their adventure on feather64 with an official feather which has their name in its lore.
                 \n<#656b96>The feather has no abilities. Feathers are collectibles and will not be replaced.
-                \n<#656b96>Many players will trick you into dropping your feather 'press q to activate your feather', this drops your feather.
+                \n<#656b96>Many players will trick you into dropping your feather 'press q to activate your feather', this drops your feather. 
                 \n<#656b96>Many players will kill and raid to collect other players feathers. "
   report:
-    short-format: "<#ffffff>• <#656b96>Please privately report hackers to a Moderator via Discord."
+    short-format: "<#ffffff>• <#656b96>Please privately report hackers to an Administrator via Discord."
     long-format: "<#656b96>We appreciate reports of hackers.
                 \n<#656b96>When you publicly announce that a hacker is online, you are helping them know when to hide their hacks.
-                \n<#656b96>Please join the discord (<#949bd1>/discord) and report to a mod."
+                \n<#656b96>Please join the discord (<#949bd1>/discord) and report to an admin."
   combatlog:
     short-format: "<#ffffff>• <#656b96>Logging out in PvP will spawn an NPC with your inventory!"
     long-format: "<#656b96>When you combat log on f64, an NPC will spawn with your inventory.
                 \n<#656b96>If it is killed, your items will drop and you will reconnect dead.
-                \n<#656b96>The NPC will disappear after 30 seconds.
+                \n<#656b96>The NPC will despawn after 30 seconds.
                 \n<#656b96>You will not be able to reconnect while your NPC is still alive."
   staff:
     short-format: "<#ffffff>• <#656b96>Got a Question? Ask staff <#949bd1>/tip staff"
@@ -106,98 +109,117 @@ topics:
                 \n<#aaaaaa>Player"
   supporter:
     short-format: "<#ffffff>• <#656b96>Become a supporter $5+/month - <#949bd1>/tip supporter"
-    long-format: "<#ffeb8b>https://donate.feather64.net/
+    long-format: "<#FFC170><click:open_url:https://donate.feather64.net>donate.feather64.net</click>
                 \n<#656b96>To be a supporter, donate $5+ USD monthly via the Supporter Subscription package at the <#949bd1>/donate link<#656b96>.
                 \n<#656b96>Supporters get a <#AA0000>+ <#656b96>beside their nametag to indicate their supporter status. No other perks
                 \n<#656b96>Only perm donors can become supporters"
   donate:
     short-format: "<#ffffff>• <#656b96>Become a donor - <#949bd1>/tip donate"
-    long-format: "<#FFC170>https://donate.feather64.net/
-                \n<#656b96>Gold name
-                \n<#656b96>Discord Perks
-                \n<#656b96>Set <#949bd1>3 homes <#656b96>instead of the default 1
-                \n<#656b96>/ss set (change spawner type - limited options)
-                \n<#656b96>An aesthetic Donor kit
-                \n<#656b96>An Color codes on signs and yellow chat color code access.
-                \n<#656b96>All perks listed at the link above"
-  spawners:
-    short-format: "<#ffffff>• <#656b96>Use a silk touch pickaxe to mine and collect spawners."
-    long-format: "<#656b96>All pickaxes with the silk touch enchantment can mine spawners.
-                \n<#656b96>Move spawners wherever you'd like.
-                \n<#656b96>Donors can change spawner type. <#949bd1>/ss change [creature]
-                \n<#656b96>Donors can only change spawners to natural types. <#949bd1>/donate"
+    long-format: "<#FFC170><click:open_url:https://donate.feather64.net>donate.feather64.net</click>
+                \n
+                \n<#656b96>All donations are used for running feather64.
+                \n<#656b96>Thank you for considering to donate.
+                \n
+                \n<#656b96>Perks:
+                \n<#656b96>Set <#949bd1>5 homes <#656b96>instead of the default <#949bd1>1<#656b96>.
+                \n<#656b96>Command <#949bd1>/ss set <mob> <#656b96>(change spawner type - limited mobs)
+                \n<#656b96>Aesthetic <#949bd1>Donor kit <#656b96>containing <#949bd1>leather Armor <#656b96>and <#949bd1>Donor Brick<#656b96>.
+                \n<#656b96>Discord <#949bd1>#donors <#656b96>access and <#949bd1>personal voice channel <#656b96>access.
+                \n<dark_gray><italic>More perks listed at the link above"
+  vote:
+    short-format: "<#ffffff>• <#656b96>Vote daily to support f64 (Free Logs!) - <#949bd1>/vote"
+    long-format: "<#656b96>Vote on 4 websites daily for a total of 64 logs:
+                \n<#949bd1><hover:show_text:'Click to Vote'><click:open_url:https://www.planetminecraft.com/server/straight-up-survival-no-protection-smp-4081761/vote>planetminecraft.com</click></hover>
+                \n<#949bd1><hover:show_text:'Click to Vote'><click:open_url:https://minecraft-server-list.com/server/421677/vote>minecraft-server-list.com</click></hover>
+                \n<#949bd1><hover:show_text:'Click to Vote'><click:open_url:https://minecraft-server.net/vote/SUSMinecraft>minecraft-server.net</click></hover>
+                \n<#949bd1><hover:show_text:'Click to Vote'><click:open_url:https://minecraft-mp.com/server/276921/vote>minecraft-mp.com</click></hover>"
   colors:
     short-format: "<#ffffff>• <#656b96>Donors can use color codes on signs."
     long-format: "<#656b96>Donors can color text on signs with color codes.
-                \n<#656b96>Prefix text on signs with &<code>
-                \n<#656b96><code> options:
-                 &11 &22 &33 &44 &55 &66 &77 &88 &99 &00 &aa &bb &cc &dd &ee &ff
+                \n<#656b96>Prefix text on signs with a code:
+                \n<DARK_BLUE>&1 <DARK_GREEN>&2 <DARK_AQUA>&3 <DARK_RED>&4 <DARK_PURPLE>&5 <GOLD>&6 <dark_gray>&7 <gray>&8 <BLUE>&9 <BLACK>&0 <white>&a <AQUA>&b <RED>&c <LIGHT_PURPLE>&d <YELLOW>&e <WHITE>&f
                 \n<#656b96>Donors can also use color code e in chat."
   ignore:
     short-format: "<#ffffff>• <#656b96>y'all have access to <#949bd1>/ignore <player>"
     long-format: "<#656b96>We allow a lot of crude and toxic chat on f64.
                 \n<#656b96>You can use /ignore to remove yourself from chat you don't like."
   border:
-    short-format: "<#ffffff>• <#656b96>BORDERS Overworld: <#949bd1>512k <#656b96>Nether: <#949bd1>64k <#656b96>End: borderless-resets"
+    short-format: "<#ffffff>• <#656b96>BORDERS Overworld: <#949bd1>256k <#656b96>Nether: <#949bd1>32k <#656b96>End: <#949bd1>borderless-resets"
     long-format: "<#656b96>World Borders:
-                \n<#656b96>Overworld: <#949bd1>512,000
-                \n<#656b96>Nether: <#949bd1>64,000
+                \n<#656b96>Overworld: <#949bd1>256,000
+                \n<#656b96>Nether: <#949bd1>32,000
                 \n<#656b96>The End: <#949bd1>Borderless <#656b96>- <#949bd1>/tip endreset"
+  servertime:
+    short-format: "<#ffffff>• <#656b96>F64 uses ET as server time. Check time with <#949bd1>/servertime"
+    long-format: "<#656b96>The server operates in the Eastern North American time zone.
+                  \n<#656b96>Announcements with a time specified, will always be in ET.
+                  \n<#656b96>use <#949bd1>/servertime <#656b96>to view the time of the server."
   economy:
     short-format: "<#ffffff>• <#656b96>Lapis is used as currency on f64. <#949bd1>/tip economy"
     long-format: "<#949bd1>/deposit <amount | all> <#656b96>- Add Lapis to your account.
                 \n<#949bd1>/withdraw <amount> <#656b96>- Take out Lapis from your account.
                 \n<#949bd1>/balance <#656b96>- display current amount of Lapis in your account.
-                \n<#949bd1>/transfer <player> <amount> <#656b96>- send Lapis.
+                \n<#949bd1>/transfer <amount> <player> <#656b96>- send Lapis.
                 \n<#949bd1>/tip market <#656b96>- Information about the market"
   market:
     short-format: "<#ffffff>• <#656b96>The market allows players to post and view trade ads. <#949bd1>/tip market"
     long-format: "<#656b96>The market is simply a place for you to post and view ads.
                 \n<#656b96>The market doesn't assist with transactions of goods.
+                \n<#656b96>Quickly edit your own ad by clicking on it in the market.
+                \n<#656b96>Check out <#949bd1>/tip adformat <#656b96>for an ad formatting guide.
                 \n<#949bd1>/market help <#656b96>- View market commands."
-
+  adedit:
+    short-format: "<#ffffff>• <#656b96>Edit your own ad by clicking on it in the market."
+    long-format: "<#656b96>Quickly edit your own ad by clicking on it in the market.
+                \n<#656b96>Editing your ad will mark it as updated \"Today\".
+                \n<#656b96>When you update your ad, it will be broadcast in chat."
+  adformat:
+    short-format: "<#ffffff>• <#656b96>You can format market ads! <#949bd1>/tip adformat"
+    long-format: "<#656b96>To format market ads, use tags before.
+                \n<#656b96>This <#949bd1><hover:show_text:'web editor'><click:open_url:https://webui.adventure.kyori.net/?mode=lore&input=%3Cred%3Ehere%27s+%3Cgold%3Esome+%3Cyellow%3Eexample+%3Cgreen%3Eformatting+%3C%238c57ff%3EHex+color+codes+work+too!+%3C%23xxxxxx%3E>link</click></hover> <#656b96>may help you format your ads.
+                \n<#656b96>Preset Colors:      <rainbow><hover:show_text:'<DARK_RED>\\<DARK_RED> <RED>\\<RED> <GOLD>\\<GOLD> <YELLOW>\\<YELLOW> <DARK_GREEN>\\<DARK_GREEN> <white>\\<white> <DARK_AQUA>\\<DARK_AQUA> <AQUA>\\<AQUA> <DARK_BLUE>\\<DARK_BLUE> <BLUE>\\<BLUE> <DARK_PURPLE>\\<DARK_PURPLE> <LIGHT_PURPLE>\\<LIGHT_PURPLE> <BLACK>\\<BLACK> <gray>\\<gray> <dark_gray>\\<dark_gray> <WHITE>\\<WHITE>.'>Hover Here</hover></rainbow>
+                \n<#656b96>Hex color codes:   <white>\\<#xxxxxx>
+                \n<#656b96>Italic:                 <white>\\<i> 
+                \n<#656b96>Bold:                  <white>\\<b>
+                \n<#656b96>Line Break:          <white>\\<br>"
   sleep:
     short-format: "<#ffffff>• <#656b96>The night passes exponentially faster as more people sleep."
     long-format: "<#656b96>To allow players to skip the night, time will speed up as more people sleep in beds."
 
   restarts:
-    short-format: "<#ffffff>• <#656b96>f64 restarts daily at <#949bd1>3:00AM ET<#656b96>."
+    short-format: "<#ffffff>• <#656b96>f64 restarts daily at <#949bd1>4:00AM ET<#656b96>."
     long-format: "<#656b96>Servers need to restart periodically to run smoothly.
-                \n<#656b96>feather64 restarts every 24 hours at <#949bd1>3:00AM ET<#656b96>."
-  clan:
-    short-format: "<#ffffff>• <#656b96>Use clans to play together. <#949bd1>/tip clan"
+                \n<#656b96>feather64 restarts every 24 hours at <#949bd1>4:00AM ET<#656b96>."
+  clans:
+    short-format: "<#ffffff>• <#656b96>Use clans to play together. <#949bd1>/tip clans"
     long-format: "<#656b96>Clans allow groups of players to play together.
-                \n<#656b96>Creating  a clan: <#949bd1>10,000 Lapis
+                \n<#656b96>Creating  a clan: <#949bd1>25,000 Lapis
                 \n<#656b96>Setting clan home: <#949bd1>1,000 Lapis
                 \n<#656b96>Inviting someone to your clan: <#949bd1>100 Lapis
-                \n<#949bd1>3+ <#656b96>members required to set clan home.
                 \n<#656b96>Type <#949bd1>/clan <#656b96>to see all clan commands."
   totems:
     short-format: "<#ffffff>• <#656b96>Only Illusioners drop totems. <#949bd1>/tip totems"
     long-format: "<#656b96>On feather64, we want PvP to be profitable
                 \n<#656b96>We prefer fights without totems.
                 \n<#656b96>Type <#949bd1>/tip illusioner <#656b96>for more information."
-
   illusioner:
-    short-format: "<#ffffff>• <#656b96>You can summon an Illusioner on f64. <#949bd1>/tip illusioner"
-    long-format: "<#656b96>Illusioners are the only mob that drops totems on f64. <#949bd1>/tip totems
+    short-format: "<#ffffff>• <#656b96>You can summon an Illusioner. <#949bd1>/tip illusioner"
+    long-format: "<#656b96>Illusioners are the only mob that drops totems. <#949bd1>/tip totems
                 \n<#656b96>Illusioners are a custom boss which require a team to fight.
                 \n<#656b96>Once spawned, the Illusioner will summon 10 vexes.
-                \n<#656b96>The Illusioner's bow can 1 shot players with high tier armor.
+                \n<#656b96>The illusioner will teleport around nearby players.
+                \n<#656b96>The Illusioner's bow can 1 shot players with high tier armor. 
                 \n<#656b96>To spawn the Illusioner place the following blocks:
                 \n<#949bd1> [] <#656b96>- Wadering Trader Head
                 \n<#949bd1>[  ] <#656b96>- Lapis Block
                 \n<#949bd1>[  ] <#656b96>- Lapis Block"
-
   raidfarm:
     short-format: "<#ffffff>• <#656b96>Raid farms do not drop totems."
-    long-format: "<#656b96>Illusioners are the only mob that drops totems on f64.
+    long-format: "<#656b96>Illusioners are the only mob that drops totems on f64. 
                 \n<#949bd1>/tip totems /tip illusioner"
-
   endreset:
-    short-format: "<#ffffff>• <#656b96>The End resets on the 1st & 16th of the month. <#949bd1>/tip endreset"
-    long-format: "<#656b96>The End resets on the 1st at <#949bd1>7:30pm ET
-                \n<#656b96>The End resets on the 16th at <#949bd1>7:30pm GMT (2:30pm ET)
+    short-format: "<#ffffff>• <#656b96>The End resets on the 1st of the month. <#949bd1>/tip endreset"
+    long-format: "<#656b96>The End resets on the 1st at <#949bd1>5:00pm ET
                 \n<#656b96>The End is a poor base location because of this.
                 \n<#656b96>The portal closest to spawn is protected from grief."
   msg:
@@ -205,47 +227,61 @@ topics:
     long-format: "<#656b96>Messaging commands let you privately speak to another player.
                 \n<#656b96>/msg [player] [message]   -  initiate a private conversation.
                 \n<#656b96>/r [message]  -  Respond to the last person who PMed you."
+  spawners:
+    short-format: "<#ffffff>• <#656b96>Use a silk touch pickaxe to mine and collect spawners."
+    long-format: "<#656b96>All pickaxes with the silk touch enchantment can mine spawners.
+                \n<#656b96>Move spawners wherever you'd like.
+                \n<#656b96>Donors can change spawner type. <#949bd1>/ss change [creature]
+                \n<#656b96>Donors can only change spawners to natural types. <#949bd1>/donate"
+  campfires:
+    short-format: "<#ffffff>• <#656b96>On F64, the warmth of a campfire will heal you."
+    long-format: "<#656b96>Standing next to a campfire on feather64 will heal you.
+                \n<#656b96>This is a nod to Terraria's Cozy Fire health regeneration buff"
   teleport:
-    short-format: "<#ffffff>• <#656b96>There are 5 commands to teleport on f64. <#949bd1>/tip teleport"
-    long-format: "<#949bd1>/spawn  <#656b96>- Teleport to spawn island safe platform.
-                \n<#949bd1>/warp [ warp name ]  <#656b96>- Teleports you to a safe location.
-                \n<#949bd1>/tpa [ player ]      <#656b96>- Request to teleport to another player.
-                \n<#949bd1>/home  <#656b96>-  This will take you your home. <#949bd1>/tip homes
-                \n<#949bd1>/clan home  <#656b96>-  A home set by your clan leader <#949bd1>/tip clan."
+    short-format: "<#ffffff>• <#656b96>There are 6 commands to teleport on f64. <#949bd1>/tip teleport"
+    long-format: "<#949bd1>/spawn <#656b96>- Teleport to spawn island safe platform.
+                \n<#949bd1>/warp [ warp name ] <#656b96>- Teleports you to a safe location.
+                \n<#949bd1>/tpa [ player ] <#656b96>- Request to teleport to another player.
+                \n<#949bd1>/tpahere [ player ] <#656b96>- Request a player to teleport to you.
+                \n<#949bd1>/home <#656b96>- This will take you your home. <#949bd1>/tip homes
+                \n<#949bd1>/clan home <#656b96>- A home set by your clan leader <#949bd1>/tip clans."
   homes:
-    short-format: "<#ffffff>• <#656b96>Players can set a personal home <#949bd1>/tip homes"
-    long-format: "<#656b96>DEFAULT PLAYERS:
-                \n<#949bd1>/sethome  <#656b96>- Sets your home location.
-                \n<#949bd1>/home  <#656b96>- Teleports you to your home location.
-                \n<#656b96>DONORS:
-                \n<#949bd1>/sethome [ home name ]  <#656b96>- sets one of your <#949bd1>3 <#656b96>home locations.
-                \n<#949bd1>/home [ home name ]     <#656b96>- Teleports you to the specified home.
-                \n<#949bd1>/delhome [ home name ]  <#656b96>- Deleted the specified home."
+    short-format: "<#ffffff>• <#656b96>Players can set a personal home. <#949bd1>/tip homes"
+    long-format: "<#656b96>Home Guide:
+                \n<#949bd1>/sethome <#656b96>- Sets your home location.
+                \n<#949bd1>/home <#656b96>- Teleports you to your home location."
+  donorhomes:
+    short-format: "<#ffffff>• <#656b96>Donors can set 5 personal homes. <#949bd1>/tip donorhomes"
+    long-format: "<#656b96>Donor Home Guide:
+                \n<#949bd1>/sethome [ home name ] <#656b96>- sets one of your <#949bd1>5 <#656b96>home locations.
+                \n<#949bd1>/home [ home name ] <#656b96>- Teleports you to the specified home.
+                \n<#949bd1>/delhome [ home name ] <#656b96>- Deleted the specified home."
   warps:
     short-format: "<#ffffff>• <#656b96>Use warps to teleport to server hotspots. <#949bd1>/tip warps"
     long-format: "<#656b96>Use warps to teleport to server hotspots.
                 \n<#656b96>When warping, you must stand still for <#949bd1>4 <#656b96>seconds.
-                \n<#656b96>Some warps are for travelling away from spawn [<#949bd1>N<#656b96>,<#949bd1>E<#656b96>,<#949bd1>S<#656b96>,<#949bd1>W<#656b96>]
                 \n<#656b96>Some warps are for hanging out [<#949bd1>ship<#656b96>, <#949bd1>spawn<#656b96>, <#949bd1>donor<#656b96>]
                 \n<#949bd1>/warp <warp>"
   new:
     short-format: "<#ffffff>• <#656b96>New player info: <#949bd1>/tip new"
-    long-format: "<#656b96>To safely leave spawn, use a warp.
-                \n<#656b96><#949bd1>/warp n<#656b96>, <#949bd1>/warp e<#656b96>, <#949bd1>/warp s<#656b96>, <#949bd1>/warp w
-                \n<#656b96>New players have keep-inventory enabled for <#949bd1>1 hour
-                \n<#656b96>We suggest building your base at least <#949bd1>50k <#656b96>out. <#949bd1>/tip basing
+    long-format: "<#656b96>We suggest building your base at least <#949bd1>50k <#656b96>out. <#949bd1>/tip basing
                 \n<#656b96>We are not anarchy, we have rules; however, raiding and griefing are allowed.
                 \n<#656b96>Check out the command <#949bd1>/tip"
   basing:
-    short-format: "<#ffffff>• <#656b96>Base security tips: <#949bd1>/tip basing"
+    short-format: "<#ffffff>• <#656b96>Build your base 50k+ away from spawn for security. <#949bd1>/tip basing"
     long-format: "<#656b96>Build <#949bd1>50k+ <#656b96>block away from spawn
                 \n<#656b96>Build your base underground.
                 \n<#656b96>Avoid mining around your base, giving it a large footprint.
                 \n<#656b96>Do not create a nether portal at your base."
+  raiding:
+    short-format: "<#ffffff>• <#949bd1>Raiding <#656b96>and <#949bd1>Griefing <#656b96>are allowed."
+    long-format: "<#656b96>Feather64 is a <#949bd1>No Protection SMP<#656b96>.
+                \n<#656b96>All players can raid and grief. Be careful who you trust.
+                \n<#656b96>check out <#949bd1>/tip basing <#656b96>for tips on avoiding being raided."
   steam:
-    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/tip <#656b96>steam to join our steam group!"
+    short-format: "<#ffffff>• <#656b96>Type <#949bd1>/tip steam <#656b96>to join our steam group!"
     long-format: "<#656b96>Join our steam group!
-                \n<#949bd1>https://steamcommunity.com/groups/feather64"
+                \n<#96d7f2><click:open_url:https://steamcommunity.com/groups/feather64/>https://steamcommunity.com/groups/feather64/</click>"
   discord:
     short-format: "<#ffffff>• <#656b96>Type <#949bd1>/discord <#656b96>to join our community!"
     long-format: "<#656b96>Discord is the center of information for feather64.
@@ -253,13 +289,18 @@ topics:
                 \n<#656b96>Use <#949bd1>/discord <#656b96>to get an invite link.
                 \n<#656b96>Follow the instructions in <#949bd1>#link-instructions <#656b96>to join"
   website:
-    short-format: "<#ffffff>• <#949bd1>https://feather64.net"
-    long-format: "<#949bd1>https://feather64.net"
+    short-format: "<#ffffff>• <#949bd1><hover:show_text:'https://feather64.net/'><click:open_url:https://feather64.net>feather64.net</click></hover>"
+    long-format: "<#949bd1><hover:show_text:'https://feather64.net/'><click:open_url:https://feather64.net>feather64.net</click></hover>"
   enderchest:
     short-format: "<#ffffff>• <#656b96>Ender chests are disabled on f64."
     long-format: "<#656b96>Ender chests are disabled on feather64.
                 \n<#656b96>You cannot craft, open, break, or place them.
                 \n<#656b96>On f64, we want raids to be  profitable."
+  phantoms:
+    short-format: "<#ffffff>• <#656b96>Phantoms are disabled on f64. Ghasts drop membrane."
+    long-format: "<#656b96>Phantoms are disabled on feather64.
+                \n<#656b96>The 'doInsomnia' gamerule has been set to false.
+                \n<#656b96>Ghasts drop 1 phantom membrane."
   prefix:
     short-format: "<#ffffff>• <#656b96>Type <#949bd1>/prefix <#656b96>to learn about the roman numeral prefixes."
     long-format: "<#656b96>Prefixes are the roman numerals infront of player's names.
@@ -282,13 +323,101 @@ topics:
   spawn:
     short-format: "<#ffffff>• <#656b96>Spawn is a protected island where players can meet up."
     long-format: "<#656b96>Spawn is a protected island where players can meet up.
-                \n<#656b96>There are <#949bd1>3 safe-zones (no PvP) <#656b96>on the island: <#949bd1>the ship<#656b96>, <#949bd1>the hub<#656b96>, <#949bd1>and the spawn platform
+                \n<#656b96>There are <#949bd1>3 safe-zones (no PvP) <#656b96>on the island: 
+                \n<#656b96>[1] <#949bd1>spawn ship<#656b96> [2] <#949bd1>spawn hub<#656b96> [3] <#949bd1>spawn platform
                 \n<#656b96>You must travel out to build."
-
+  headdrops:
+    short-format: "<#ffffff>• <#656b96>Every mob variant has its own drop rate. <#949bd1>/tip headdrops"
+    long-format: "<#656b96>Hover above the labels for head drop rate info:
+                \n<#949bd1><hover:show_text:'<#656b96>Animal Head Drop Rates
+                                          <br><#949bd1>axolotl <gray>- <dark_gray>blue: <white>100% <dark_gray>other types(4): <white>20%
+                                          <br><#949bd1>bee <gray>- <dark_gray>all types(4): <white>20%
+                                          <br><#949bd1>bat <gray>- <white>10%
+                                          <br><#949bd1>chicken <gray>- <white>1%
+                                          <br><#949bd1>cod <gray>- <white>10%
+                                          <br><#949bd1>cow - <white>1%
+                                          <br><#949bd1>dolphin <gray>- <white>33%
+                                          <br><#949bd1>goat <gray>- <dark_gray>screaming: <white>100% <dark_gray>normal: <white>1%
+                                          <br><#949bd1>glow squid <gray>- <white>5%
+                                          <br><#949bd1>mushroom cow <gray>- <dark_gray>all types(2): <white>10%
+                                          <br><#949bd1>ocelot <gray>- <white>20%
+                                          <br><#949bd1>panda - <dark_gray>all types(7): <white>27%
+                                          <br><#949bd1>pig <gray>- <white>1%
+                                          <br><#949bd1>polar bear <gray>- <white>20%
+                                          <br><#949bd1>pufferfish <gray>- <white>15%
+                                          <br><#949bd1>rabit <gray>- <dark_gray>all types(7): <white>26%
+                                          <br><#949bd1>salmon <gray>- <white>10%
+                                          <br><#949bd1>sheep <gray>- <dark_gray>jeb_: <white>10% <dark_gray>other types(16): <white>1.75%
+                                          <br><#949bd1>squid <gray>- <white>5%
+                                          <br><#949bd1>tropical fish <gray>- <white>10%
+                                          <br><#949bd1>turtle <gray>- <white>10%
+                '>[<white>Animals</white>]</hover>
+                <#949bd1><hover:show_text:'<#656b96>Pet Head Drop Rates
+                                          <br><#949bd1>cat <gray>- <dark_gray>all types(11): <white>33%
+                                          <br><#949bd1>donkey <gray>- <white>20%
+                                          <br><#949bd1>fox <gray>- <dark_gray>all types(2): <white>10%
+                                          <br><#949bd1>horse <gray>- <dark_gray>skeleton: <white>20% <dark_gray>Zombie: <white>100% <dark_gray>other types(7): <white>27%
+                                          <br><#949bd1>llama <gray>- <dark_gray>all types(6): <white>24%
+                                          <br><#949bd1>mule <gray>- <white>20%
+                                          <br><#949bd1>parrot <gray>- <dark_gray>all types(5): <white>25%
+                                          <br><#949bd1>snowman <gray>- <white>5%
+                                          <br><#949bd1>wolf <gray>- <white>24%
+                '>[<white>Pets</white>]</hover>
+                <#949bd1><hover:show_text:'<#656b96>Monster Head Drop Rates
+                                          <br><#949bd1>creeper <gray>- <dark_gray>charged: <white>100% <dark_gray>normal: <white>50%
+                                          <br><#949bd1>drowned <gray>- <white>5%
+                                          <br><#949bd1>elder guardian <gray>- <white>100%
+                                          <br><#949bd1>guardian <gray>- <white>0.5%
+                                          <br><#949bd1>husk <gray>- <white>6%
+                                          <br><#949bd1>silverfish <gray>- <white>5%
+                                          <br><#949bd1>skeleton <gray>- <white>2.5%
+                                          <br><#949bd1>slime <gray>- <white>0.5%
+                                          <br><#949bd1>spider <gray>- <dark_gray>all types(2): <white>0.5%
+                                          <br><#949bd1>stray <gray>- <white>6%
+                                          <br><#949bd1>zombie <gray>- <white>2.5%
+                '>[<white>Monsters</white>]</hover> 
+                <#949bd1><hover:show_text:'<#656b96>Illager Head Drop Rates
+                                          <br><#949bd1>wandering trader - <white>1%
+                                          <br><#949bd1>illusioner <gray>- <white>100%
+                                          <br><#949bd1>pillager <gray>- <white>2.5%
+                                          <br><#949bd1>vindicator <gray>- <white>5%
+                                          <br><#949bd1>evoker <gray>- <white>25%
+                                          <br><#949bd1>ravager <gray>- <white>25%
+                                          <br><#949bd1>witch <gray>- <white>0.5%
+                                          <br><#949bd1>vex <gray>- <white>10%
+                                          <br><#949bd1>zombie villager <gray>- <white>50%
+                                          <br><#949bd1>iron golem <gray>- <white>5%
+                                          <br><#949bd1>snow villagers <dark_gray>all types(15): <gray>- <white>1%
+                                          <br><#949bd1>jungle villagers <dark_gray>all types(15): <gray>- <white>5%
+                                          <br><#949bd1>desert villagers <dark_gray>all types(15): <gray>- <white>100%
+                                          <br><#949bd1>plains villagers <dark_gray>all types(15): <gray>- <white>100%
+                                          <br><#949bd1>savanna villagers <dark_gray>all types(15): <gray>- <white>100%
+                                          <br><#949bd1>swamp villagers <dark_gray>all types(15): <gray>- <white>100%
+                                          <br><#949bd1>taiga villagers <dark_gray>all types(15): <gray>- <white>100%
+                '>[<white>illagers</white>]</hover>
+                <#949bd1><hover:show_text:'<#656b96>Nether Head Drop Rates
+                                          <br><#949bd1>wither <gray>- <white>100%
+                                          <br><#949bd1>piglin <gray>- <white>4%
+                                          <br><#949bd1>piglin brute <gray>- <white>10%
+                                          <br><#949bd1>zombified piglin <gray>- <white>0.5%
+                                          <br><#949bd1>hoglin <gray>- <white>3%
+                                          <br><#949bd1>zoglin <gray>- <white>20%
+                                          <br><#949bd1>blaze <gray>- <white>0.5%
+                                          <br><#949bd1>ghast <gray>- <white>2.%
+                                          <br><#949bd1>magma cube <gray>- <white>0.5%
+                                          <br><#949bd1>wither skeleton <gray>- <white>2.5%
+                                          <br><#949bd1>strider <gray>- <white>10%
+                '>[<white>Nether</white>]</hover> 
+                <#949bd1><hover:show_text:'<#656b96>The End Head Drop Rates
+                                          <br><#949bd1>ender dragon <gray>- <white>100%
+                                          <br><#949bd1>enderman <gray>- <white>0.5%
+                                          <br><#949bd1>endermite <gray>- <white>10%
+                                          <br><#949bd1>shulker <gray>- <white>5%
+                '>[<white>The End</white>]</hover>"
 distinguish:
-  donor: "<#fffccb><message>"
-  assistant: "<#b5e5f6><message>"
-  moderator: "<#dbf3bf><message>"
+  donor: "<#fAECA7><message>"
+  assistant: "<#6EABFF><message>"
+  moderator: "<#49DB44><message>"
   administrator: "<#f51657><message>"
 
 AssTips:
@@ -300,7 +429,7 @@ AssTips:
   - "<#96d7f2>Ass Tip: Help new players with info, not items!"
   - "<#96d7f2>Ass Tip: Don't be to toxic lmao."
   - "<#96d7f2>Ass Tip: Report possible exploits."
-  - "<#96d7f2>Ass Tip: Don't call out vanished admins/mods."
+  - "<#96d7f2>Ass Tip: Don't call out vanished Mods/Admins."
   - "<#96d7f2>Ass Tip: /sc <message>"
   - "<#96d7f2>Ass Tip: Mute spammers ONLY when its hack spam."
   - "<#96d7f2>Ass Tip: Kick players only when absolutely required."
@@ -317,12 +446,11 @@ AssTips:
   - "<#96d7f2>Ass Tip: Correct spreading of false information"
   - "<#96d7f2>Ass Tip: Assistants must be gay and autistic."
   - "<#96d7f2>Ass Tip: F64 players are allowed to be toxic."
-  - "<#96d7f2>Ass Tip: Do not moderate, leave that to the moderators"
+  - "<#96d7f2>Ass Tip: Do not moderate, leave that to the Mods/Admins"
   - "<#96d7f2>Ass Tip: Ass (wo)man"
   - "<#96d7f2>Ass Tip: Assist players with info."
   - "<#96d7f2>Ass Tip: You are loved."
   - "<#96d7f2>Ass Tip: May I take your order?"
-
 ModTips:
   - "<#8fe38c>Mod Tip: Focus on catching rule breakers."
   - "<#8fe38c>Mod Tip: /ban <player> <days>d <reason>"

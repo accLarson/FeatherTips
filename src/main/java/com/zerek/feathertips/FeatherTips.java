@@ -35,8 +35,11 @@ public final class FeatherTips extends JavaPlugin {
         this.getCommand("broadcast").setExecutor((new BroadcastCommand(this)));
         this.getCommand("broadcast").setTabCompleter(new BroadcastTabCompleter(this));
         this.getCommand("feathertips").setExecutor((new FeatherTipsCommand(this)));
-        this.getCommand("feathertips").setTabCompleter((new FeatherTipsCompleter()));
+        this.getCommand("feathertips").setTabCompleter((new FeatherTipsTabCompleter()));
         this.getCommand("distinguish").setExecutor((new DistinguishCommand(this)));
+        this.getCommand("distinguish").setTabCompleter((new DistinguishTabCompleter()));
+        this.getCommand("servertime").setExecutor((new ServerTimeCommand(this)));
+        this.getCommand("servertime").setTabCompleter((new ServerTimeTabCompleter()));
     }
 
     @Override
