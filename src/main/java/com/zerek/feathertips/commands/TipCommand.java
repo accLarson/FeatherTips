@@ -31,7 +31,7 @@ public class TipCommand implements CommandExecutor {
         }
         else if (args.length == 2 && (sender.hasPermission("feather.tips.staff") || sender instanceof ConsoleCommandSender)){
             if (isValidTopic(args) && isValidPlayer(args)) plugin.getTopicManager().tipOther(sender, plugin.getServer().getPlayer(args[1]), args[0]);
-            else sender.sendMessage(ChatColor.of("#656b96") + "Invalid topic or player not online");
+            else sender.sendMessage(ChatColor.of("#656b96") + "Invalid topic or player not online.");
         }
         else sender.sendMessage(ChatColor.of("#656b96") + "invalid command - /info [topic]");
         return true;
