@@ -25,7 +25,6 @@ public class TopicManager {
     private final HashMap<String, Topic> topics = new HashMap<String, Topic>();
     private final TextComponent prefixLine;
     private final TextComponent suffixLine;
-    private final TextComponent usage;
     private final String tipOthersText;
 
     MiniMessage mm = MiniMessage.miniMessage();
@@ -38,7 +37,7 @@ public class TopicManager {
         //get prefix line, suffix line, and help text from config
         this.prefixLine = (TextComponent) mm.deserialize(plugin.getConfig().getString("prefix-line"));
         this.suffixLine = (TextComponent) mm.deserialize(plugin.getConfig().getString("suffix-line"));
-        this.usage = (TextComponent) mm.deserialize(plugin.getConfig().getString("tip-usage"));
+        TextComponent usage = (TextComponent) mm.deserialize(plugin.getConfig().getString("tip-usage"));
         this.tipOthersText = plugin.getConfig().getString("tip-others");
 
         //iterate through all topics and get all message formats from the config.yml
