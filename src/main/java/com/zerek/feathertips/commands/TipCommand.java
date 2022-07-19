@@ -26,6 +26,7 @@ public class TipCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (args.length == 0) plugin.getTopicManager().tipMenu(sender);
         else if (args.length == 1){
+            if (sender.isOp() && args[0].equals("reload")) plugin.reload(sender);
             if (isValidTopic(args)) plugin.getTopicManager().tipSelf(sender, args[0]);
             else sender.sendMessage(ChatColor.of("#656b96") + "Invalid Topic");
         }
