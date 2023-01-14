@@ -1,6 +1,7 @@
 package com.zerek.feathertips;
 
 import com.zerek.feathertips.commands.*;
+import com.zerek.feathertips.listeners.AsyncChatListener;
 import com.zerek.feathertips.listeners.PlayerJoinListener;
 import com.zerek.feathertips.managers.TopicManager;
 import com.zerek.feathertips.tasks.AutoBroadcastTask;
@@ -18,6 +19,8 @@ public final class FeatherTips extends JavaPlugin {
     private final ArrayList<String> assTips = new ArrayList<String>();
 
     private final Map<String,String> distinguishColors = new HashMap<>();
+    private String distinguishTag = "";
+
 
     @Override
     public void onEnable() {
@@ -25,9 +28,11 @@ public final class FeatherTips extends JavaPlugin {
         this.saveDefaultConfig();
         this.topicManager = new TopicManager(this);
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
+        getServer().getPluginManager().registerEvents(new AsyncChatListener(this), this);
         this.assTips.addAll(this.getConfig().getStringList("AssTips"));
         this.modTips.addAll(this.getConfig().getStringList("ModTips"));
-        getConfig().getConfigurationSection("distinguish").getKeys(false).forEach(role -> distinguishColors.put(role,getConfig().getString("distinguish." + role)));
+        getConfig().getConfigurationSection("distinguish.colors").getKeys(false).forEach(role -> distinguishColors.put(role,getConfig().getString("distinguish.colors." + role)));
+        distinguishTag = getConfig().getString("distinguish.tag");
 
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), getConfig().getInt("period"), getConfig().getInt("period"));
 
@@ -35,8 +40,6 @@ public final class FeatherTips extends JavaPlugin {
         this.getCommand("tip").setTabCompleter(new TipTabCompleter(this));
         this.getCommand("broadcast").setExecutor((new BroadcastCommand(this)));
         this.getCommand("broadcast").setTabCompleter(new BroadcastTabCompleter(this));
-        this.getCommand("distinguish").setExecutor((new DistinguishCommand(this)));
-        this.getCommand("distinguish").setTabCompleter((new DistinguishTabCompleter()));
         this.getCommand("servertime").setExecutor((new ServerTimeCommand(this)));
         this.getCommand("servertime").setTabCompleter((new ServerTimeTabCompleter()));
     }
@@ -55,7 +58,8 @@ public final class FeatherTips extends JavaPlugin {
         this.modTips.clear();
         this.modTips.addAll(this.getConfig().getStringList("ModTips"));
         distinguishColors.clear();
-        getConfig().getConfigurationSection("distinguish").getKeys(false).forEach(role -> distinguishColors.put(role,getConfig().getString("distinguish." + role)));
+        getConfig().getConfigurationSection("distinguish.colors").getKeys(false).forEach(role -> distinguishColors.put(role,getConfig().getString("distinguish.colors." + role)));
+        distinguishTag = getConfig().getString("distinguish.tag");
 
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), getConfig().getInt("period"), getConfig().getInt("period"));
 
@@ -74,6 +78,9 @@ public final class FeatherTips extends JavaPlugin {
     }
     public Map<String, String> getDistinguishColors() {
         return distinguishColors;
+    }
+    public String getDistinguishTag() {
+        return distinguishTag;
     }
 }
 

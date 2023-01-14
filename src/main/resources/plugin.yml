@@ -9,7 +9,5 @@ commands:
     description: Display long format tips to individuals (often yourself)
   broadcast:
     description: Display short format tips to all online players
-  distinguish:
-    description: Send a message with distinguished color based on your role
   servertime:
     description: Displays server time (ET)
