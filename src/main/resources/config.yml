@@ -405,14 +405,6 @@ topics:
                                           <br><#949bd1>Ender Dragon <gray>- <#656b96>Collected from End cities.
                 '>[<white>Vanilla</white>]</hover>"
 
-distinguish:
-  tag: "<distinguish>"
-  colors:
-    donor: "#FAECA7"
-    assistant: "#6EABFF"
-    moderator: "#49DB44"
-    administrator: "#F51657"
-
 AssTips:
   - "<#96d7f2>Ass Tip: Keep up to date on #announcements."
   - "<#96d7f2>Ass Tip: Keep up to date on #changelog."
