@@ -9,25 +9,28 @@ import java.util.Random;
 public class AutoBroadcastTask implements Runnable{
 
     private final FeatherTips plugin;
+
     private List<String> availableTopicList;
 
-    public AutoBroadcastTask(FeatherTips plugin) {
-        this.plugin = plugin;
-        availableTopicList = new ArrayList<>(plugin.getTopicManager().getTopics());
-    }
+    private final Random random = new Random();
 
-    public static Integer getRandomInt(Integer max) {
-        Random ran = new Random();
-        return ran.nextInt(max);
+    public AutoBroadcastTask(FeatherTips plugin) {
+
+        this.plugin = plugin;
+
+        availableTopicList = new ArrayList<>(plugin.getTopicManager().getTopicsMapKeys());
+
     }
 
     @Override
     public void run() {
-        if (availableTopicList.size() == 0) availableTopicList = new ArrayList<>(plugin.getTopicManager().getTopics());
-        else {
-            int randomInt = getRandomInt(availableTopicList.size());
-            plugin.getTopicManager().broadcast(availableTopicList.get(randomInt));
-            availableTopicList.remove(randomInt);
-        }
+
+        if (availableTopicList.size() == 0) availableTopicList = new ArrayList<>(plugin.getTopicManager().getTopicsMapKeys());
+
+        int randomInt = random.nextInt(availableTopicList.size());
+
+        plugin.getTopicManager().broadcast(availableTopicList.get(randomInt));
+
+        availableTopicList.remove(randomInt);
     }
 }

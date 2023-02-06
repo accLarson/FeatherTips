@@ -16,33 +16,94 @@ public class TipCommand implements CommandExecutor {
         this.plugin = plugin;
     }
 
-    private boolean isValidTopic(String[] args){
-        return plugin.getTopicManager().getTopics().contains(args [0]);
+    private boolean isValidTopic(String topic){
+
+        return plugin.getTopicManager().getTopicsMap().containsKey(topic);
     }
 
-    private boolean isValidPlayer(String[] args){
-        return plugin.getServer().getOfflinePlayer(args[1]).isOnline();
+    private boolean isValidPlayer(String username){
+
+        return plugin.getServer().getOfflinePlayer(username).isOnline();
     }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
-        if (args.length == 0); //display some sort of tip help
+        switch (args.length) {
 
-        else if (args.length == 1){
+            // /tip
+            case 0:
 
-            if (isValidTopic(args)) plugin.getTopicManager().tipSelf(sender, args[0]);
+                if (!sender.hasPermission("feather.tips.tip")) {
 
-            else sender.sendMessage(ChatColor.of("#656b96") + "Invalid Topic");
+                    sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
+
+                    return true;
+                }
+
+                // Checks passed ----------------------------------------------------------------
+
+
+                sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("help"));
+
+                return true;
+
+            case 1:
+
+                if (!sender.hasPermission("feather.tips.tip")) {
+
+                    sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
+
+                    return true;
+                }
+
+                if (!isValidTopic(args[0])) {
+
+                    sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorInvalidTopic"));
+
+                    return true;
+                }
+
+                // Checks passed ----------------------------------------------------------------
+
+                plugin.getTopicManager().tipSelf(sender, args[0]);
+
+                return  true;
+
+            case 2:
+
+                if (!sender.hasPermission("feather.tips.staff")) {
+
+                    sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
+
+                    return true;
+                }
+
+                if (!isValidTopic(args[0])) {
+
+                    sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorInvalidTopic"));
+
+                    return true;
+                }
+
+                if (!isValidPlayer(args[1])) {
+
+                    sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorPlayerOffline"));
+
+                    return true;
+                }
+
+                // Checks passed ----------------------------------------------------------------
+
+                plugin.getTopicManager().tipOther(sender, plugin.getServer().getPlayer(args[1]), args[0]);
+
+                return true;
+
+            default:
+
+                sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorInvalidArgumentCount"));
+
+                return true;
         }
-        else if (args.length == 2 && (sender.hasPermission("feather.tips.staff") || sender instanceof ConsoleCommandSender)){
-
-            if (isValidTopic(args) && isValidPlayer(args)) plugin.getTopicManager().tipOther(sender, plugin.getServer().getPlayer(args[1]), args[0]);
-
-            else sender.sendMessage(ChatColor.of("#656b96") + "Invalid topic or player not online.");
-        }
-        else sender.sendMessage(ChatColor.of("#656b96") + "invalid command - /info [topic]");
-
-        return true;
     }
 }

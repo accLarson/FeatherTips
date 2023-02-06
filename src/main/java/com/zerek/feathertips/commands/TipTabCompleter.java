@@ -21,7 +21,7 @@ public class TipTabCompleter implements TabCompleter {
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
 
-        List<String> all = new ArrayList<String>(plugin.getTopicManager().getTopics());
+        List<String> all = new ArrayList<String>(plugin.getTopicManager().getTopicsMapKeys());
 
         if (args.length == 1) {
 
@@ -35,6 +35,6 @@ public class TipTabCompleter implements TabCompleter {
         }
         else if (args.length == 2 && sender.hasPermission("feather.tips.staff")) return null;
 
-        return new ArrayList<String>();
+        return new ArrayList<>();
     }
 }

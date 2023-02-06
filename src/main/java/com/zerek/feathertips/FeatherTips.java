@@ -2,44 +2,58 @@ package com.zerek.feathertips;
 
 import com.zerek.feathertips.commands.*;
 import com.zerek.feathertips.listeners.PlayerJoinListener;
-import com.zerek.feathertips.managers.TopicManager;
+import com.zerek.feathertips.managers.ConfigManager;
+import com.zerek.feathertips.managers.MessagesManager;
+import com.zerek.feathertips.managers.TopicsManager;
 import com.zerek.feathertips.tasks.AutoBroadcastTask;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
 
 public final class FeatherTips extends JavaPlugin {
 
-    private TopicManager topicManager;
+    private ConfigManager configManager;
 
-    private final ArrayList<String> modTips = new ArrayList<String>();
+    private MessagesManager messagesManager;
 
-    private final ArrayList<String> assTips = new ArrayList<String>();
-
+    private TopicsManager topicManager;
 
     @Override
     public void onEnable() {
 
         this.saveDefaultConfig();
 
-        this.topicManager = new TopicManager(this);
+        this.configManager = new ConfigManager(this);
+
+        this.saveResource("messages.yml", false);
+
+        this.messagesManager = new MessagesManager(this);
+
+        this.saveResource("topics.yml", false);
+
+        this.topicManager = new TopicsManager(this);
+
 
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
 
-        this.assTips.addAll(this.getConfig().getStringList("AssTips"));
-
-        this.modTips.addAll(this.getConfig().getStringList("ModTips"));
 
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), getConfig().getInt("period"), getConfig().getInt("period"));
+
 
         this.getCommand("tip").setExecutor(new TipCommand(this));
 
         this.getCommand("tip").setTabCompleter(new TipTabCompleter(this));
 
+
+        this.getCommand("tips").setExecutor(new TipsCommand(this));
+
+        this.getCommand("tips").setTabCompleter(new TipsTabCompleter());
+
+
         this.getCommand("broadcast").setExecutor((new BroadcastCommand(this)));
 
         this.getCommand("broadcast").setTabCompleter(new BroadcastTabCompleter(this));
+
 
         this.getCommand("servertime").setExecutor((new ServerTimeCommand(this)));
 
@@ -48,6 +62,7 @@ public final class FeatherTips extends JavaPlugin {
 
     @Override
     public void onDisable() {
+
         getServer().getScheduler().cancelTasks(this);
     }
 
@@ -55,34 +70,33 @@ public final class FeatherTips extends JavaPlugin {
 
         getServer().getScheduler().cancelTasks(this);
 
+
         this.reloadConfig();
 
-        this.topicManager = new TopicManager(this);
 
-        this.assTips.clear();
+        this.configManager = new ConfigManager(this);
 
-        this.assTips.addAll(this.getConfig().getStringList("AssTips"));
+        this.messagesManager = new MessagesManager(this);
 
-        this.modTips.clear();
+        this.topicManager = new TopicsManager(this);
 
-        this.modTips.addAll(this.getConfig().getStringList("ModTips"));
 
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), getConfig().getInt("period"), getConfig().getInt("period"));
 
-        sender.sendMessage("FeatherTips reloaded");
+
+        sender.sendMessage(this.messagesManager.getMessageAsComponent("reloaded"));
     }
 
-    public TopicManager getTopicManager() {
+    public ConfigManager getConfigManager() {
+        return configManager;
+    }
+
+    public MessagesManager getMessagesManager() {
+        return messagesManager;
+    }
+
+    public TopicsManager getTopicManager() {
         return topicManager;
     }
-
-    public ArrayList<String> getModTips() {
-        return modTips;
-    }
-
-    public ArrayList<String> getAssTips() {
-        return assTips;
-    }
-
 }
 

@@ -20,15 +20,23 @@ public class BroadcastTabCompleter implements TabCompleter {
 
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
-        List<String> all = new ArrayList<String>(plugin.getTopicManager().getTopics());
 
-        if (args.length == 1 && sender.hasPermission("feather.tips.staff")) {
-            List<String> match = new ArrayList<String>();
-            for (String topic : all) {
-                if (topic.toLowerCase().startsWith(args[0].toLowerCase())) match.add(topic);
-            }
-            return match;
+        List<String> topics = new ArrayList<>(plugin.getTopicManager().getTopicsMapKeys());
+
+        // Check if sender has permission
+        if (!sender.hasPermission("feather.tips.staff")) return new ArrayList<>();
+
+        // Check if player provided correct amount of arguments
+        if (args.length != 1) return new ArrayList<>();
+
+        // Checks passed ----------------------------------------------------------------
+
+        List<String> match = new ArrayList<>();
+
+        for (String topic : topics) {
+
+            if (topic.toLowerCase().startsWith(args[0].toLowerCase())) match.add(topic);
         }
-        return new ArrayList<String>();
+        return match;
     }
 }
