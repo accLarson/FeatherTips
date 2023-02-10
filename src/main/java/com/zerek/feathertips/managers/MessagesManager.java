@@ -52,6 +52,4 @@ public class MessagesManager {
     public Component getMessageAsComponent(String key) {
         return MiniMessage.miniMessage().deserialize(messagesMap.get(key));
     }
-
-
 }

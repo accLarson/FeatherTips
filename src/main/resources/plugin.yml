@@ -7,6 +7,8 @@ description: Tip system for feather64
 commands:
   tip:
     description: Display long format tips to individuals (often yourself)
+  tips:
+    description: Display tip menu
   broadcast:
     description: Display short format tips to all online players
   servertime:

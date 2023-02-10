@@ -84,7 +84,7 @@ public final class FeatherTips extends JavaPlugin {
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), getConfig().getInt("period"), getConfig().getInt("period"));
 
 
-        sender.sendMessage(this.messagesManager.getMessageAsComponent("reloaded"));
+        sender.sendMessage(this.messagesManager.getMessageAsComponent("Reloaded"));
     }
 
     public ConfigManager getConfigManager() {
