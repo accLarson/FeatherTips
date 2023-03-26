@@ -23,7 +23,7 @@ public class BroadcastCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
         // Check if sender has permission
-        if (!sender.hasPermission("feather.tips.staff")) {
+        if (!sender.hasPermission("feather.tips.broadcast")) {
 
             sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
 

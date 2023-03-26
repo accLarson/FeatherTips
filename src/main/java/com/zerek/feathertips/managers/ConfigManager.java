@@ -15,7 +15,7 @@ public class ConfigManager {
 
     private final List<String> modTips = new ArrayList<>();
 
-    private String timezone;
+    private String timeZone;
 
 
     public ConfigManager(FeatherTips plugin) {
@@ -33,7 +33,7 @@ public class ConfigManager {
 
         modTips.addAll(plugin.getConfig().getStringList("ModTips"));
 
-        timezone = plugin.getConfig().getString("timezone");
+        timeZone = plugin.getConfig().getString("TimeZone");
 
 
     }
@@ -48,5 +48,9 @@ public class ConfigManager {
 
     public List<String> getModTips() {
         return modTips;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
     }
 }

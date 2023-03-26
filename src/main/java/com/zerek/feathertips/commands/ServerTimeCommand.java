@@ -16,14 +16,9 @@ public class ServerTimeCommand implements CommandExecutor {
 
     private final FeatherTips plugin;
 
-    String serverTime;
-
-
     public ServerTimeCommand(FeatherTips plugin) {
 
         this.plugin = plugin;
-
-        serverTime = plugin.getMessagesManager().getMessageAsString("server-time");
     }
 
     @Override
@@ -36,7 +31,9 @@ public class ServerTimeCommand implements CommandExecutor {
             return true;
         }
 
-        sender.sendMessage(MiniMessage.miniMessage().deserialize(serverTime, Placeholder.unparsed("time",Instant.now().atZone(ZoneId.of("Canada/Eastern")).format(DateTimeFormatter.ofPattern("hh:mm a")))));
+        sender.sendMessage(MiniMessage.miniMessage().deserialize(
+                plugin.getMessagesManager().getMessageAsString("server-time"),
+                Placeholder.unparsed("time",Instant.now().atZone(ZoneId.of(plugin.getConfigManager().getTimeZone())).format(DateTimeFormatter.ofPattern("hh:mm a")))));
 
         return true;
     }

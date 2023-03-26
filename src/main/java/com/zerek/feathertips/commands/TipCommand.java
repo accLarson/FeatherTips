@@ -1,11 +1,9 @@
 package com.zerek.feathertips.commands;
 
 import com.zerek.feathertips.FeatherTips;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.ConsoleCommandSender;
 import org.jetbrains.annotations.NotNull;
 
 public class TipCommand implements CommandExecutor {
@@ -72,7 +70,7 @@ public class TipCommand implements CommandExecutor {
 
             case 2:
 
-                if (!sender.hasPermission("feather.tips.staff")) {
+                if (!sender.hasPermission("feather.tips.tip.others")) {
 
                     sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
 
