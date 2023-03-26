@@ -28,15 +28,15 @@ public final class FeatherTips extends JavaPlugin {
 
         this.configManager = new ConfigManager(this);
 
-        if (this.getResource("messages.yml") == null) this.saveResource("messages.yml", false);
+        this.saveResource("messages.yml", false);
 
         this.messagesManager = new MessagesManager(this);
 
-        if (this.getResource("topics.yml") == null) this.saveResource("topics.yml", false);
+        this.saveResource("topics.yml", false);
 
         this.topicManager = new TopicsManager(this);
 
-        if (this.getResource("login_tips.yml") == null) this.saveResource("login_tips.yml", false);
+        this.saveResource("login_tips.yml", false);
 
         this.loginTipsManager = new LoginTipsManager(this);
 

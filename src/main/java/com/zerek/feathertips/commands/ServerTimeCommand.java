@@ -32,7 +32,7 @@ public class ServerTimeCommand implements CommandExecutor {
         }
 
         sender.sendMessage(MiniMessage.miniMessage().deserialize(
-                plugin.getMessagesManager().getMessageAsString("server-time"),
+                plugin.getMessagesManager().getMessageAsString("ServerTime"),
                 Placeholder.unparsed("time",Instant.now().atZone(ZoneId.of(plugin.getConfigManager().getTimeZone())).format(DateTimeFormatter.ofPattern("hh:mm a")))));
 
         return true;
