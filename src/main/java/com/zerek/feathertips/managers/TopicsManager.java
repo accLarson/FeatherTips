@@ -6,7 +6,6 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
-import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
 import org.bukkit.command.CommandSender;
@@ -16,7 +15,6 @@ import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -54,7 +52,7 @@ public class TopicsManager {
 
     private void generateMessagesMap() {
 
-        //iterate through all topics and get all message formats from the config.yml
+        //iterate through all topics and get all message formats from the topics.yml
         for (String topic : yml.getKeys(false)){
 
             //get the short-format message

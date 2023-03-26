@@ -3,6 +3,7 @@ package com.zerek.feathertips;
 import com.zerek.feathertips.commands.*;
 import com.zerek.feathertips.listeners.PlayerJoinListener;
 import com.zerek.feathertips.managers.ConfigManager;
+import com.zerek.feathertips.managers.LoginTipsManager;
 import com.zerek.feathertips.managers.MessagesManager;
 import com.zerek.feathertips.managers.TopicsManager;
 import com.zerek.feathertips.tasks.AutoBroadcastTask;
@@ -18,6 +19,8 @@ public final class FeatherTips extends JavaPlugin {
 
     private TopicsManager topicManager;
 
+    private LoginTipsManager loginTipsManager;
+
     @Override
     public void onEnable() {
 
@@ -25,13 +28,17 @@ public final class FeatherTips extends JavaPlugin {
 
         this.configManager = new ConfigManager(this);
 
-        this.saveResource("messages.yml", false);
+        if (this.getResource("messages.yml") == null) this.saveResource("messages.yml", false);
 
         this.messagesManager = new MessagesManager(this);
 
-        this.saveResource("topics.yml", false);
+        if (this.getResource("topics.yml") == null) this.saveResource("topics.yml", false);
 
         this.topicManager = new TopicsManager(this);
+
+        if (this.getResource("login_tips.yml") == null) this.saveResource("login_tips.yml", false);
+
+        this.loginTipsManager = new LoginTipsManager(this);
 
 
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
@@ -80,9 +87,12 @@ public final class FeatherTips extends JavaPlugin {
 
         this.topicManager = new TopicsManager(this);
 
+        this.loginTipsManager = new LoginTipsManager(this);
+
 
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), configManager.getBroadcastDelayPeriod(), configManager.getBroadcastDelayPeriod());
 
+        getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
 
         sender.sendMessage(this.messagesManager.getMessageAsComponent("Reloaded"));
     }
@@ -98,5 +108,11 @@ public final class FeatherTips extends JavaPlugin {
     public TopicsManager getTopicManager() {
         return topicManager;
     }
+
+    public LoginTipsManager getLoginTipsManager() {
+        return loginTipsManager;
+    }
+
+
 }
 
