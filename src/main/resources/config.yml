@@ -4,7 +4,7 @@
 period: 24000
 
 #What timezone should /servertime display? https://mkyong.com/java8/java-display-all-zoneid-and-its-utc-offset/
-timezone: "Canada/Eastern"
+timeZone: "Canada/Eastern"
 
 AssTips:
   - "<#96d7f2>Ass Tip: Keep up to date on #announcements."

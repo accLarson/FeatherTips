@@ -44,7 +44,7 @@ public class TipCommand implements CommandExecutor {
                 // Checks passed ----------------------------------------------------------------
 
 
-                sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("help"));
+                sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("Help"));
 
                 return true;
 
