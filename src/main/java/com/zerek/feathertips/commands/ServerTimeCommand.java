@@ -14,15 +14,27 @@ import java.time.format.DateTimeFormatter;
 
 public class ServerTimeCommand implements CommandExecutor {
 
+    private final FeatherTips plugin;
+
     String serverTime;
 
+
     public ServerTimeCommand(FeatherTips plugin) {
+
+        this.plugin = plugin;
 
         serverTime = plugin.getMessagesManager().getMessageAsString("server-time");
     }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+
+        if (!sender.hasPermission("feather.tips.servertime")) {
+
+            sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
+
+            return true;
+        }
 
         sender.sendMessage(MiniMessage.miniMessage().deserialize(serverTime, Placeholder.unparsed("time",Instant.now().atZone(ZoneId.of("Canada/Eastern")).format(DateTimeFormatter.ofPattern("hh:mm a")))));
 

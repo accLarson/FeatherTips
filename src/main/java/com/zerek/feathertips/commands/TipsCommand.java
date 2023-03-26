@@ -17,6 +17,13 @@ public class TipsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
+        if (!sender.hasPermission("feather.tips.tips")) {
+
+            sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorNoPermission"));
+
+            return true;
+        }
+
         if (args.length == 0) plugin.getTopicManager().displayTipsMenu(sender);
 
         else if (sender.hasPermission("feather.tips.reload") && args[0].equals("reload")) plugin.reload(sender);
