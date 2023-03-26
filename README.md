@@ -15,10 +15,10 @@ Suggested use: specify your staff ranks and add staff role specific tips.
 
 ### Permission Nodes:
     feather.tips.tip                -  /tip <topic>           -  View a tip.
-    feather.tips.tips               -  /tips                  -  Displays all topics as hoverable labels.
+    feather.tips.tips               -  /tips                  -  Displays all topics as hoverables.
     feather.tips.tip.others         -  /tip <topic> <player>  -  Send another player a tip.
-    feather.tips.broadcast          -  /broadcast <topic>     -  Broadcast a short format tip to everyone.
+    feather.tips.broadcast          -  /broadcast <topic>     -  Broadcast a tip to everyone.
     feather.tips.reload             -  /tips reload           -  Reload the plugin.
-    feather.tips.servertime         -  /servertime            -  Displays the time in the timezone set in config.yml.
-    feather.tips.login.<tip-group>  -                         -  Recieve group specific tip when logging on.
+    feather.tips.servertime         -  /servertime            -  Displays a timzeon specific time.
+    feather.tips.login.<tip-group>  -                         -  Recieve group specific tips at login.
 
