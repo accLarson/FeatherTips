@@ -1,4 +1,4 @@
-PrefixLine: "<#ffffff>•<#7777777>--- <#ffffff>feather64 Tips <#7777777>-----------------------------------<#ffffff>•"
+PrefixLine: "<#ffffff>•<#7777777>--- <#ffffff>Tips <#7777777>--------------------------------------------<#ffffff>•"
 SuffixLine: "<#ffffff>•<#7777777>----------------------------------------------------<#ffffff>•"
 TipOthers: "<#ffffff>• <#949bd1><staff_username> <#656b96>displayed <#949bd1>/tip <topic> <#656b96>to <#949bd1><username>."
 ServerTime: "<#656b96>Server time: <#949bd1><time>"
