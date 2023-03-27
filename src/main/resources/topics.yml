@@ -15,7 +15,7 @@ rules:
   long-format: "<#656b96>List rules here"
 donate:
   short-format: "<#ffffff>• <#656b96>Become a donor - <#949bd1>/tip donate"
-  long-format: "<#FFC170>Donation/Ranks link here</click>
+  long-format: "<#FFC170>Donation/Ranks link here
               <br>
               <br><#656b96>Donation/rank info"
 border:
