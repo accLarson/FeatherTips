@@ -1,6 +1,6 @@
 #FeatherTips - Made by Zerek - Made for feather64.net
 
-#How often should short format tips be broadcast to all of chat?
+#How often should short format tips be broadcast to all of chat (in ticks)?
 period: 24000
 
 #What timezone should /servertime display? https://mkyong.com/java8/java-display-all-zoneid-and-its-utc-offset/

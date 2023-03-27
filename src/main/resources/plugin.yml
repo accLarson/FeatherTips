@@ -12,4 +12,4 @@ commands:
   broadcast:
     description: Display short format tips to all online players
   servertime:
-    description: Displays server time (ET)
+    description: Displays server time
