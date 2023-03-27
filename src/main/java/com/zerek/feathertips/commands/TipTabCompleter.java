@@ -33,7 +33,7 @@ public class TipTabCompleter implements TabCompleter {
             }
             return match;
         }
-        else if (args.length == 2 && sender.hasPermission("feather.tips.staff")) return null;
+        else if (args.length == 2 && sender.hasPermission("feather.tips.tip.others")) return null;
 
         return new ArrayList<>();
     }

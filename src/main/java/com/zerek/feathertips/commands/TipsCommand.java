@@ -28,6 +28,8 @@ public class TipsCommand implements CommandExecutor {
 
         else if (sender.hasPermission("feather.tips.reload") && args[0].equals("reload")) plugin.reload(sender);
 
+        else sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorInvalidArgumentCount"));
+
         return false;
     }
 }

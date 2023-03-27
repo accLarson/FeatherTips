@@ -24,7 +24,7 @@ public class BroadcastTabCompleter implements TabCompleter {
         List<String> topics = new ArrayList<>(plugin.getTopicManager().getTopicsMapKeys());
 
         // Check if sender has permission
-        if (!sender.hasPermission("feather.tips.staff")) return new ArrayList<>();
+        if (!sender.hasPermission("feather.tips.broadcast")) return new ArrayList<>();
 
         // Check if player provided correct amount of arguments
         if (args.length != 1) return new ArrayList<>();
