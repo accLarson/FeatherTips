@@ -8,6 +8,8 @@ import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.permissions.Permission;
+import org.bukkit.permissions.PermissionDefault;
 
 import java.io.File;
 import java.util.HashMap;
@@ -22,7 +24,7 @@ public class LoginTipsManager {
 
     private FileConfiguration yml;
 
-    private final HashMap<String, List<String>> loginTipsMap = new HashMap<>();
+    private final HashMap<Permission, List<String>> loginTipsMap = new HashMap<>();
 
     private final Random random = new Random();
 
@@ -44,15 +46,16 @@ public class LoginTipsManager {
         yml = YamlConfiguration.loadConfiguration(file);
 
         //iterate through and map all tip-groups specified in login_tips.yml.
-        yml.getKeys(false).forEach(g -> this.loginTipsMap.put(g, yml.getStringList(g)));
+        yml.getKeys(false).forEach(g -> this.loginTipsMap.put(new Permission("feather.tips.login." + g, PermissionDefault.FALSE), yml.getStringList(g)));
+
     }
 
-    public void sendLoginTip(Player player, String group) {
+    public void sendLoginTip(Player player, Permission group) {
 
         player.sendMessage(mm.deserialize(loginTipsMap.get(group).get(random.nextInt(loginTipsMap.get(group).size()))));
     }
 
-    public HashMap<String, List<String>> getLoginTipsMap() {
+    public HashMap<Permission, List<String>> getLoginTipsMap() {
         return loginTipsMap;
     }
 }
