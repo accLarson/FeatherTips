@@ -6,14 +6,12 @@ public class Topic {
 
     private final TextComponent shortFormat;
     private final TextComponent longFormat;
-    private final String name;
 
 
     //constructor
-    public Topic(TextComponent shortFormat, TextComponent longFormat, String topic) {
+    public Topic(TextComponent shortFormat, TextComponent longFormat) {
         this.shortFormat = shortFormat;
         this.longFormat = longFormat;
-        this.name = topic;
     }
 
     public TextComponent getShortFormat(){
@@ -22,9 +20,5 @@ public class Topic {
 
     public TextComponent getLongFormat(){
         return longFormat;
-    }
-
-    public String getName() {
-        return name;
     }
 }

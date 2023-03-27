@@ -62,7 +62,7 @@ public class TopicsManager {
             TextComponent longFormat = (TextComponent) mm.deserialize(yml.getString(topic + ".long-format"));
 
             //add a Topic object to the hash map with the above values for short-format and long-format and topic;
-            this.topicsMap.put(topic, new Topic(shortFormat, longFormat, topic));
+            this.topicsMap.put(topic, new Topic(shortFormat, longFormat));
         }
     }
 
