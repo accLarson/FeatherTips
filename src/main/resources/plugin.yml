@@ -1,9 +1,9 @@
 name: FeatherTips
 version: '${project.version}'
-main: com.zerek.feathertips.FeatherTips
+main: dev.zerek.feathertips.FeatherTips
 api-version: 1.19
 authors: [ Zerek ]
-description: Tip system for feather64
+description: Conveniently make information available to players.
 commands:
   tip:
     description: Display long format tips to individuals (often yourself)
