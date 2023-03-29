@@ -10,6 +10,8 @@ import dev.zerek.feathertips.tasks.AutoBroadcastTask;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 
 public final class FeatherTips extends JavaPlugin {
 
@@ -24,19 +26,11 @@ public final class FeatherTips extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        this.saveDefaultConfig();
-
         this.configManager = new ConfigManager(this);
-
-        this.saveResource("messages.yml", false);
 
         this.messagesManager = new MessagesManager(this);
 
-        this.saveResource("topics.yml", false);
-
         this.topicManager = new TopicsManager(this);
-
-        this.saveResource("login_tips.yml", false);
 
         this.loginTipsManager = new LoginTipsManager(this);
 

@@ -43,6 +43,8 @@ public class TopicsManager {
 
     private void init() {
 
+        if (!new File(plugin.getDataFolder(), "topics.yml").exists()) plugin.saveResource("topics.yml", false);
+
         file = new File(plugin.getDataFolder() + File.separator + "topics.yml");
 
         yml = YamlConfiguration.loadConfiguration(file);

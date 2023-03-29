@@ -2,7 +2,6 @@ package dev.zerek.feathertips.managers;
 
 import dev.zerek.feathertips.FeatherTips;
 
-
 public class ConfigManager {
 
     private final FeatherTips plugin;
@@ -20,6 +19,8 @@ public class ConfigManager {
     }
 
     private void init() {
+
+        plugin.saveDefaultConfig();
 
         this.broadcastDelayPeriod = plugin.getConfig().getInt("period");
 

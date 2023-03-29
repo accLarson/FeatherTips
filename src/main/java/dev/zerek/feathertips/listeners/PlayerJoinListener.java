@@ -20,7 +20,6 @@ public class PlayerJoinListener implements Listener {
 
         plugin.getLoginTipsManager().getLoginTipsMap().keySet().forEach(p -> {
 
-
             // If the player has the correct permission, have the LoginTipManager send a random login tip.
             if (event.getPlayer().hasPermission(p)) plugin.getLoginTipsManager().sendLoginTip(event.getPlayer(),p);
         });

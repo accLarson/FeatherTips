@@ -29,6 +29,8 @@ public class MessagesManager {
 
     private void init() {
 
+        if (!new File(plugin.getDataFolder(), "messages.yml").exists()) plugin.saveResource("messages.yml", false);
+
         file = new File(plugin.getDataFolder() + File.separator + "messages.yml");
 
         yml = YamlConfiguration.loadConfiguration(file);

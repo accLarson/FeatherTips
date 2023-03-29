@@ -38,6 +38,8 @@ public class LoginTipsManager {
 
     private void init() {
 
+        if (!new File(plugin.getDataFolder(), "login_tips.yml").exists()) plugin.saveResource("login_tips.yml", false);
+
         file = new File(plugin.getDataFolder() + File.separator + "login_tips.yml");
 
         yml = YamlConfiguration.loadConfiguration(file);
