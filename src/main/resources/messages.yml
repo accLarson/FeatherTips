@@ -10,6 +10,6 @@ ErrorInvalidTopic: "<#E4453A>Invalid Topic"
 ErrorInvalidArgumentCount: "<#E4453A>You have entered too many or too few arguments."
 ErrorPlayerOffline: "<#E4453A>The specified player is offline or invalid."
 ErrorNoPermission: "<#E4453A>You don't have permission to use this command"
-Help: "<#949BD1>feather64 tip guide
+Help: "<#949BD1>tip guide
         \n<#949BD1>/tip <topic> <#656b96>— Display useful info on the specified topic.
-        \n<#949BD1>Most questions about feather64 are answered by checking tips."
+        \n<#949BD1>Most questions about this server are answered by checking tips."
