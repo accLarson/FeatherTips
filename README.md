@@ -12,6 +12,8 @@ This plugin adds `/servertime` which displays the time in a set timezone set in 
 This plugin allows you to create tip-groups who will be sent a random tip from a specific list everytime they log on.   
 Suggested use: specify your staff ranks and add staff role specific tips.
 
+[modrinth](https://modrinth.com/plugin/feathertips)
+
 
 ### Permission Nodes:
     feather.tips.tip                -  /tip <topic>           -  View a tip.
