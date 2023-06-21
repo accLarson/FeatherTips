@@ -8,6 +8,7 @@ import dev.zerek.feathertips.managers.MessagesManager;
 import dev.zerek.feathertips.managers.TopicsManager;
 import dev.zerek.feathertips.tasks.AutoBroadcastTask;
 import org.bukkit.command.CommandSender;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -85,8 +86,6 @@ public final class FeatherTips extends JavaPlugin {
 
 
         getServer().getScheduler().scheduleSyncRepeatingTask(this, new AutoBroadcastTask(this), configManager.getBroadcastDelayPeriod(), configManager.getBroadcastDelayPeriod());
-
-        getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
 
         sender.sendMessage(this.messagesManager.getMessageAsComponent("Reloaded"));
     }
