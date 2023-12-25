@@ -6,7 +6,7 @@
 
     <groupId>dev.zerek</groupId>
     <artifactId>FeatherTips</artifactId>
-    <version>2.2.1</version>
+    <version>2.3.0</version>
     <packaging>jar</packaging>
 
     <name>FeatherTips</name>
