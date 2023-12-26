@@ -1,7 +1,7 @@
 name: FeatherTips
 version: '${project.version}'
 main: dev.zerek.feathertips.FeatherTips
-api-version: 1.19
+api-version: 1.20
 authors: [ Zerek ]
 description: Conveniently make information available to players.
 commands:
@@ -13,3 +13,5 @@ commands:
     description: Display short format tips to all online players
   servertime:
     description: Displays server time
+  announce:
+    description: announce custom message in chat
