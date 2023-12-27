@@ -1,6 +1,8 @@
 package dev.zerek.feathertips.commands;
 
 import dev.zerek.feathertips.FeatherTips;
+import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,6 +11,8 @@ import org.jetbrains.annotations.NotNull;
 public class AnnounceCommand implements CommandExecutor {
 
     private final FeatherTips plugin;
+    MiniMessage mm = MiniMessage.miniMessage();
+
 
     public AnnounceCommand(FeatherTips plugin) {
         this.plugin = plugin;
@@ -24,20 +28,15 @@ public class AnnounceCommand implements CommandExecutor {
         }
 
         // Check if player provided correct amount of arguments
-        if (args.length >= 1) {
+        if (args.length < 1) {
             commandSender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("ErrorInvalidArgumentCount"));
             return true;
         }
 
         // Checks passed ----------------------------------------------------------------
 
-
-
-
-
-
-
-
+        TextComponent textComponent = (TextComponent) mm.deserialize(String.join(" ", args));
+        plugin.getServer().broadcast(textComponent);
 
         return false;
     }

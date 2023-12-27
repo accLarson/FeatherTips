@@ -98,7 +98,12 @@ public class TopicsManager {
     //Tip to other player
     public void tipOther (CommandSender sender, Player player, String topic){
 
-        plugin.getServer().broadcast(mm.deserialize(plugin.getMessagesManager().getMessageAsString("TipOthers"), Placeholder.unparsed("staff_username",sender.getName()), Placeholder.unparsed("topic",topic), Placeholder.unparsed("username",player.getName())));
+        plugin.getServer().broadcast(
+                mm.deserialize(plugin.getMessagesManager().getMessageAsString("TipOthers"),
+                        Placeholder.unparsed("staff_username",sender.getName()),
+                        Placeholder.unparsed("topic",topic),
+                        Placeholder.unparsed("username",player.getName()))
+        );
 
         player.sendMessage(plugin.getMessagesManager().getMessageAsComponent("PrefixLine"));
 
