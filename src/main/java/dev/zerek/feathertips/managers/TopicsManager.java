@@ -3,7 +3,6 @@ package dev.zerek.feathertips.managers;
 import dev.zerek.feathertips.FeatherTips;
 import dev.zerek.feathertips.data.Topic;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
 import net.kyori.adventure.text.minimessage.MiniMessage;
@@ -32,14 +31,12 @@ public class TopicsManager {
 
     MiniMessage mm = MiniMessage.miniMessage();
 
-
     public TopicsManager(FeatherTips plugin) {
 
         this.plugin = plugin;
 
         this.init();
     }
-
 
     private void init() {
 
@@ -57,17 +54,14 @@ public class TopicsManager {
         //iterate through all topics and get all message formats from the topics.yml
         for (String topic : yml.getKeys(false)){
 
-            //get the short-format message
-            TextComponent shortFormat = (TextComponent) mm.deserialize(yml.getString(topic + ".short-format"));
+            String shortFormatRaw = yml.getString(topic + ".short-format", "");
 
-            //get the long-format message
-            TextComponent longFormat = (TextComponent) mm.deserialize(yml.getString(topic + ".long-format"));
+            String longFormatRaw = yml.getString(topic + ".long-format", "");
 
-            //add a Topic object to the hash map with the above values for short-format and long-format and topic;
-            this.topicsMap.put(topic, new Topic(shortFormat, longFormat));
+            // add a Topic object to the hash map with raw values
+            this.topicsMap.put(topic, new Topic(shortFormatRaw, longFormatRaw));
         }
     }
-
 
     public Set<String> getTopicsMapKeys(){
 
@@ -82,7 +76,10 @@ public class TopicsManager {
     //broadcast short format
     public void broadcast (String topic){
 
-        plugin.getServer().broadcast(topicsMap.get(topic).getShortFormat());
+        Topic t = topicsMap.get(topic);
+        if (t == null) return;
+        Component shortC = mm.deserialize(t.getShortFormatRaw());
+        plugin.getServer().broadcast(shortC);
     }
 
     //Tip to self
@@ -90,7 +87,14 @@ public class TopicsManager {
 
         sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("PrefixLine"));
 
-        sender.sendMessage(topicsMap.get(topic).getLongFormat());
+        Topic t = topicsMap.get(topic);
+        if (t != null) {
+            Component longC = mm.deserialize(
+                    t.getLongFormatRaw(),
+                    Placeholder.parsed("username", extractUsernameFor(sender))
+            );
+            sender.sendMessage(longC);
+        }
 
         sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("SuffixLine"));
     }
@@ -100,14 +104,21 @@ public class TopicsManager {
 
         plugin.getServer().broadcast(
                 mm.deserialize(plugin.getMessagesManager().getMessageAsString("TipOthers"),
-                        Placeholder.unparsed("staff_username",sender.getName()),
-                        Placeholder.unparsed("topic",topic),
-                        Placeholder.unparsed("username",player.getName()))
+                        Placeholder.parsed("staff_username",sender.getName()),
+                        Placeholder.parsed("topic",topic),
+                        Placeholder.parsed("username",player.getName()))
         );
 
         player.sendMessage(plugin.getMessagesManager().getMessageAsComponent("PrefixLine"));
 
-        player.sendMessage(topicsMap.get(topic).getLongFormat());
+        Topic t = topicsMap.get(topic);
+        if (t != null) {
+            Component longC = mm.deserialize(
+                    t.getLongFormatRaw(),
+                    Placeholder.parsed("username", player.getName())
+            );
+            player.sendMessage(longC);
+        }
 
         player.sendMessage(plugin.getMessagesManager().getMessageAsComponent("SuffixLine"));
     }
@@ -118,13 +129,14 @@ public class TopicsManager {
 
         sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("PrefixLine"));
 
-        TextComponent tipMenuDisplay = text("");
+        Component tipMenuDisplay = text("");
 
         for (String topic : getTopicsMapKeys().stream().sorted().collect(Collectors.toList())) {
 
             Component hover = mm.deserialize(plugin.getMessagesManager().getMessageAsString("MenuHoverableTitle"), Placeholder.unparsed("topic", topic))
                     .append(Component.text("\n"))
-                    .append(topicsMap.get(topic).getLongFormat());
+                    .append(mm.deserialize(topicsMap.get(topic).getLongFormatRaw(),
+                            Placeholder.parsed("username", extractUsernameFor(sender))));
 
             Component hoverable = Component.text(topic).hoverEvent(HoverEvent.showText(hover)).clickEvent(ClickEvent.suggestCommand("/tip " + topic + " "));
 
@@ -136,5 +148,12 @@ public class TopicsManager {
         sender.sendMessage(tipMenuDisplay);
 
         sender.sendMessage(plugin.getMessagesManager().getMessageAsComponent("SuffixLine"));
+    }
+
+    private String extractUsernameFor(CommandSender sender) {
+        if (sender instanceof Player) {
+            return sender.getName();
+        }
+        return "CONSOLE";
     }
 }

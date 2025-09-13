@@ -19,6 +19,7 @@ public class MessagesManager {
     private FileConfiguration yml;
 
     private final Map<String,String> messagesMap = new HashMap<>();
+    private final MiniMessage mm = MiniMessage.miniMessage();
 
     public MessagesManager(FeatherTips plugin) {
 
@@ -52,6 +53,6 @@ public class MessagesManager {
     }
 
     public Component getMessageAsComponent(String key) {
-        return MiniMessage.miniMessage().deserialize(messagesMap.get(key));
+        return mm.deserialize(messagesMap.get(key));
     }
 }

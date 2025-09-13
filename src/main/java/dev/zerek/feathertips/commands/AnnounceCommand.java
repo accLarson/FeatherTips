@@ -1,7 +1,7 @@
 package dev.zerek.feathertips.commands;
 
 import dev.zerek.feathertips.FeatherTips;
-import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -35,8 +35,8 @@ public class AnnounceCommand implements CommandExecutor {
 
         // Checks passed ----------------------------------------------------------------
 
-        TextComponent textComponent = (TextComponent) mm.deserialize(String.join(" ", args));
-        plugin.getServer().broadcast(textComponent);
+        Component component = mm.deserialize(String.join(" ", args));
+        plugin.getServer().broadcast(component);
 
         return false;
     }

@@ -1,24 +1,21 @@
 package dev.zerek.feathertips.data;
 
-import net.kyori.adventure.text.TextComponent;
-
 public class Topic {
 
-    private final TextComponent shortFormat;
-    private final TextComponent longFormat;
+    private final String shortFormatRaw;
+    private final String longFormatRaw;
 
-
-    //constructor
-    public Topic(TextComponent shortFormat, TextComponent longFormat) {
-        this.shortFormat = shortFormat;
-        this.longFormat = longFormat;
+    // constructor
+    public Topic(String shortFormatRaw, String longFormatRaw) {
+        this.shortFormatRaw = shortFormatRaw;
+        this.longFormatRaw = longFormatRaw;
     }
 
-    public TextComponent getShortFormat(){
-        return shortFormat;
+    public String getShortFormatRaw(){
+        return shortFormatRaw;
     }
 
-    public TextComponent getLongFormat(){
-        return longFormat;
+    public String getLongFormatRaw(){
+        return longFormatRaw;
     }
 }
